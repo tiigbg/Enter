@@ -1,0 +1,54 @@
+"buttons": {
+    "type": "array",
+    "title": "X buttons",
+    "uniqueItems": true,
+    "items": {
+        "type": "object",
+        "properties": {
+            "label": {
+                "type": "string"
+            },
+            "position": {
+                "type": "object",
+                "properties": {
+                    "fromLeft": {
+                        "type": "number",
+                        "default": "0.5"
+                    },
+                    "fromTop": {
+                        "type": "number",
+                        "default": "0.7"
+                    }
+                }
+            },
+            "size": {
+                "type": "object",
+                "properties": {
+                    "width": {
+                        "type": "number",
+                        "default": "0.2"
+                    },
+                    "height": {
+                        "type": "number",
+                        "default": "0.2"
+                    }
+                }
+            },
+            "actions": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "watch": {
+                        "actions": "actions"
+                    },
+                    "enumSource": [
+                        {
+                            "source": "actions",
+                            "value": "{{item.uid}}"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+},

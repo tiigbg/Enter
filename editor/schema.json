@@ -1,0 +1,164 @@
+{
+	"type": "object",
+	"properties": {
+		"story": {
+			"type": "object",
+			"format": "grid",
+			"properties": {
+				"uid": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"slug": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"scenes": {
+					"type": "array",
+					"format": "tabs",
+					"title": "Scenes",
+					"uniqueItems": true,
+					"items": {
+						"type": "object",
+						"headerTemplate": "{{self.uid}} - {{self.name}}",
+						"properties": {
+							"uid": {
+								"type": "string",
+								"propertyOrder": 10
+							},
+							"name": {
+								"type": "string",
+								"propertyOrder": 20
+							},
+							"slug": {
+								"type": "string",
+								"propertyOrder": 30
+							},
+							"description": {
+								"type": "string",
+								"propertyOrder": 40
+							},
+							"tags": {
+								"type":"array",
+								"propertyOrder": 50,
+								"description": "Advance automatically to next scene after video?",
+								"items": {
+									"type": "string",
+									"default": "AUTO_TRANSITION"
+								}
+							},
+							"media": {
+								"title": "360 media",
+								"propertyOrder": 60,
+								"$ref": "mediaSchema.json"
+							},
+							"sound": {
+								"title": "360 sound",
+								"propertyOrder": 70,
+								"$ref": "soundSchema.json"
+							},
+							"camera": {
+								"propertyOrder": 80,
+								"description": "Overrides story camera settings",
+								"options": {
+									"collapsed": true
+								},
+								"$ref": "cameraSchema.json"
+							},
+							"hotspots": {
+								"propertyOrder": 90,
+								"$ref": "hotspotsSchema.json"
+							},
+							"plugins": {
+								"type": "object",
+								"propertyOrder": 100,
+								"properties": {
+									"instances": {
+										"type": "array",
+										"format": "tabs",
+										"items": {
+											"headerTemplate": "{{self.uid}}",
+											"oneOf": [
+												{
+													"title": "DelayedActions",
+													"$ref": "delayedActionsSchema.json"
+												},
+												{
+													"title": "ARView",
+													"$ref": "arViewSchema.json"
+												},
+												{
+													"title": "LocationTriggers",
+													"$ref": "locationTriggersSchema.json"
+												},
+												{
+													"title": "Text",
+													"$ref": "simpleTextSchema.json"
+												},
+												{
+													"title": "Image",
+													"$ref": "simpleImageSchema.json"
+												},
+												{
+													"title": "Video",
+													"$ref": "simpleVideoSchema.json"
+												},
+												{
+													"title": "Button",
+													"$ref": "simpleButtonSchema.json"
+												}
+											]
+										}
+									}
+								}
+							},
+							"playlists": {
+								"type": "object",
+								"propertyOrder": 110,
+								"options": {
+									"collapsed": true
+								},
+								"properties": {
+									"default": {
+										"type": "string",
+										"watch": {
+											"playlists": "playlists"
+										},
+										"enumSource": [
+											{
+												"source": "playlists",
+												"value": "{{item.uid}}"
+											}
+										]
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"camera": {
+			"$ref": "cameraSchema.json",
+			"options": {
+				"collapsed": true
+			}
+		},
+		"playlists": {
+			"$ref": "playlistsSchema.json",
+			"options": {
+				"collapsed": true
+			}
+		},
+		"actions": {
+			"$ref": "actionsSchema.json"
+		},
+		"markers": {
+			"$ref": "markersSchema.json"
+		}
+	}
+}

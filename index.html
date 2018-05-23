@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>ENTER Mölndal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no"
+  />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta property="og:image" content="assets/meetupgallerylogo.jpg">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Uncomment to include the polyfill for webvr, does not yet seem to work reliably tho. Not needed for "magic window" style AR -->
+  <!--  <script src="lib/webvr-polyfill.js"></script>
+  <script>
+    window.WebVRConfig = { CARDBOARD_UI_DISABLED: true};
+  </script>-->
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="speaker"></div>
+
+  <div id="container"></div>
+
+  <!-- Include the threejs custom build -->
+  <script src="lib/three.js/three.custom.min.js"></script>
+
+  <!-- Include the Hammer.js library -->
+  <script src="lib/hammer.js/hammer.min.js"></script>
+
+  <!-- Include the ForgeJS library -->
+  <script src="lib/forge/forge.js"></script>
+
+  <!-- Include jQuery for transition effects-->
+  <script src="lib/jquery-3.2.1.min.js"></script>
+
+  <script src="lib/webrtc-adapter-latest.js"></script>
+
+  <!-- <script src="lib/artoolkit/artoolkit.min.js"></script> -->
+
+  <!-- <script src="lib/artoolkit/artoolkit.debug.js"></script>
+  <script src="lib/artoolkit/artoolkit.api.js"></script>
+
+  <script src="lib/artoolkit/artoolkit.three.js"></script> -->
+
+  <!-- <script src="lib/html2canvas.min.js"></script> -->
+  <script src="lib/util.js"></script>
+  <!-- <script src="lib/adapter-latest.js"></script> -->
+
+  <script language="javascript" type="text/javascript">
+
+    var viewer;
+    var story;
+    var editor = getParameterByName('editor');
+
+    loadJSON('proto35.json', function (response) {
+      // Parse JSON string into object
+      story = JSON.parse(response);
+
+      loadPlugins(story, editor);
+
+      // Creation of the FORGE.Viewer
+      viewer = new FORGE.Viewer("container", story);
+
+      function onEndedHandler() {
+        viewer.story.nextScene();
+      }
+
+      function onSceneLoadCompleteHandler() {
+        var media = viewer.story.scene.media;
+        var tags = viewer.story.scene.tags;
+
+        if (tags && tags.indexOf("AUTO_TRANSITION") && media.type === FORGE.MediaType.VIDEO) {
+          var video = media.displayObject;
+
+          video.onEnded.add(onEndedHandler);
+        }
+      }
+
+      function onReadyHandler() {
+        viewer.story.onSceneLoadComplete.add(onSceneLoadCompleteHandler);
+      }
+
+      viewer.onReady.addOnce(onReadyHandler);
+
+    });
+
+    //Transition function called by Forge when a hotspot is clicked
+    //@uid string is the target scene uid
+    var sceneTransition = function (uid) {
+      //Get string of the CSS transition time in seconds
+      var transitionTime = jQuery("#container").css('transition-duration');
+      console.log("Duration is", transitionTime);
+      //Transform this string into a number in ms
+      transitionTime = parseFloat(transitionTime) * 1000;
+      //Change the CSS state of the container
+      jQuery("#container").addClass("transition");
+      //Get camera data to manipulate according to your needs
+      var fov = viewer.camera.fov;
+      //Transform fov while transitioning
+      var fovZoomed = fov / 1.1;
+      //Keep yaw
+      var yaw = viewer.camera.yaw;
+      //Keep pitch 
+      var pitch = viewer.camera.pitch;
+      //Make the camera change its settings
+      //Learn more at https://releases.forgejs.org/latest/doc/jsdoc/FORGE.Camera.html#lookAt
+      viewer.camera.lookAt(yaw, pitch, 0, fovZoomed, transitionTime, false, "linear");
+      //Wait the end of the transition time to display the target scene
+      setTimeout(function () {
+        viewer.story.loadScene(uid);
+        jQuery("#container").removeClass("transition");
+      }, transitionTime);
+
+      // viewer.camera.lookAt(0, 0, 0, 90, 2200, false, 'easeInOutCubic');
+      // viewer.story.loadScene('scene-1');
+    };
+  </script>
+</body>
+
+</html>

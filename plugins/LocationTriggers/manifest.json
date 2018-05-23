@@ -1,0 +1,26 @@
+{
+    "uid": "se.ri.locationtriggers",
+    "name": "Location tracking plugin",
+    "shortName": "locationTriggers",
+    "description": "My plugin description",
+    "version": "1.0.0",
+    "url": "",
+
+    "author":
+    {
+        "name": "Jacob Michelsen <jacob.michelsen@ri.se>",
+        "url": ""
+    },
+
+    "licence":
+    {
+        "name": "Apache 2",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "sources":
+    [
+        "src/LocationTriggers.js"
+    ],
+
+    "constructor": "ForgePlugins.LocationTriggers"
+}

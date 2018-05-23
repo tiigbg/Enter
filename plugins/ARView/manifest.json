@@ -1,0 +1,25 @@
+{
+    "uid": "se.ri.arview",
+    "name": "AR View plugin",
+    "shortName": "arView",
+    "description": "Webcam view, can be configured to run actions upon marker detection",
+    "version": "1.0.0",
+    "url": "",
+    "author": {
+        "name": "Jacob Michelsen <jacob.michelsen@ri.se>",
+        "url": ""
+    },
+    "licence": {
+        "name": "Apache 2",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "options": {
+        "markerUID": "",
+        "action UID": "",
+        "delay": 0
+    },
+    "sources": [
+        "src/ARView.js"
+    ],
+    "constructor": "ForgePlugins.ARView"
+}

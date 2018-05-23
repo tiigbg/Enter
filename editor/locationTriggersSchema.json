@@ -1,0 +1,82 @@
+{
+    "type": "object",
+    "options": {
+        "multiple_editor_select_via_property": {
+            "property": "engine",
+            "value": "se.ri.locationtriggers"
+        }
+    },
+    "headerTemplate": "{{self.uid}}",
+    "properties": {
+        "uid": {
+            "type": "string",
+            "default": "locationtriggers-0"
+        },
+        "engine": {
+            "type": "string",
+            "default": "se.ri.locationtriggers"
+        },
+        "enabled": {
+            "options": {
+                "hidden": true
+            },
+            "type": "boolean",
+            "format": "checkbox",
+            "default": true
+        },
+        "keep": {
+            "options": {
+                "hidden": true
+            },
+            "type": "boolean",
+            "format": "checkbox",
+            "description": "Should the plugin instance be removed on scene switch?",
+            "default": false
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "pollRate": {
+                    "type": "number",
+                    "description": "Seconds between each location check",
+                    "default": 3
+                },
+                "debug": {
+                    "type": "boolean",
+                    "format": "checkbox",
+                    "description": "This will trigger the first location action regardless of distance after 3 sec",
+                    "default": false
+                },
+                "locations": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "lat": {
+                                "type": "string"
+                            },
+                            "long": {
+                                "type": "string"
+                            },
+                            "triggerDistance": {
+                                "type": "number"
+                            },
+                            "actionUID": {
+                                "type": "string",
+                                "watch": {
+                                    "actions": "actions"
+                                },
+                                "enumSource": [
+                                    {
+                                        "source": "actions",
+                                        "value": "{{item.uid}}"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

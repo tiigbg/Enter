@@ -1,0 +1,20 @@
+{
+    "type": "array",
+    "format": "tabs",
+    "uniqueItems": true,
+    "options": {
+        "hidden": false
+    },
+    "items": {
+        "type": "object",
+        "headerTemplate": "{{self.uid}}",
+        "properties": {
+            "uid": {
+                "type": "string"
+            },
+            "filename": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "array",
+    "title": "X models",
+    "items": {
+        "type": "object",
+        "headerTemplate": "{{self.uid}}",
+        "properties": {
+            "uid": {
+                "type": "string"
+            },
+            "url": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "uid": "se.ri.orientationkeeper",
+    "name": "Plugin for preserving gyro orientaton between scenes",
+    "shortName": "OrientationKeeper",
+    "description": "My plugin description",
+    "version": "1.0.0",
+    "url": "",
+
+    "author":
+    {
+        "name": "Jacob Michelsen <jacob.michelsen@ri.se>",
+        "url": ""
+    },
+
+    "licence":
+    {
+        "name": "Apache 2",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "sources":
+    [
+        "src/OrientationKeeper.js"
+    ],
+
+    "constructor": "ForgePlugins.OrientationKeeper"
+}

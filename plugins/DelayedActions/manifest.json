@@ -1,0 +1,29 @@
+{
+    "uid": "se.ri.delayedactions",
+    "name": "Delayed Actions Plugin",
+    "shortName": "delayedActions",
+    "description": "Plugin for dispatching actions after a set delay",
+    "version": "1.0.0",
+    "url": "",
+
+    "author":
+    {
+        "name": "Jacob Michelsen <jacob.michelsen@ri.se>",
+        "url": ""
+    },
+
+    "licence":
+    {
+        "name": "Apache 2",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "options": {
+        "actions": []
+    },
+    "sources":
+    [
+        "src/DelayedActions.js"
+    ],
+
+    "constructor": "ForgePlugins.DelayedActions"
+}

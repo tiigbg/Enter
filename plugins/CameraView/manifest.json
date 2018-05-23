@@ -1,0 +1,24 @@
+{
+    "uid": "se.ri.cameraview",
+    "name": "Camera View Plugin",
+    "shortName": "cameraView",
+    "description": "Shows a Pokemon Go-like camera view",
+    "version": "1.0.0",
+    "url": "",
+    "author": {
+        "name": "Jacob Michelsen <jacob.michelsen@ri.se>",
+        "url": ""
+    },
+    "licence": {
+        "name": "Apache 2",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "options": {
+        "facing": "front",
+        "delay": 0
+    },
+    "sources": [
+        "src/CameraView.js"
+    ],
+    "constructor": "ForgePlugins.CameraView"
+}
