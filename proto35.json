@@ -665,6 +665,7 @@
                 "slug": "park",
                 "description": "Center of the Park",
                 "tags": [],
+                "startingYaw": 10,
                 "media": {
                     "uid": "image-a70",
                     "type": "image",
@@ -1216,7 +1217,7 @@
                 "name": "360 Bridge",
                 "slug": "360bridge",
                 "description": "360 Bridge Panorama",
-                "startingYaw": -170,
+                "startingYaw": 0,
                 "tags": [],
                 "media": {
                     "uid": "b20_360photo",

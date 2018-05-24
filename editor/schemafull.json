@@ -52,6 +52,10 @@
 									"default": "AUTO_TRANSITION"
 								}
 							},
+							"startingYaw": {
+								"type": "number",
+								"propertyOrder": 55
+							},
 							"media": {
 								"title": "360 media",
 								"propertyOrder": 60,
