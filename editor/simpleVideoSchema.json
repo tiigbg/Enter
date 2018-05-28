@@ -50,8 +50,19 @@
             "type": "object",
             "properties": {
                 "video": {
-                    "type": "string",
-                    "default": "assets/"
+                    "oneOf": [
+                        {
+                            "type": "string",
+                            "default": "assets/"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "default": "assets/"
+                            }
+                        }
+                    ]
                 }
             },
             "propertyOrder": 50
@@ -101,7 +112,7 @@
                 "alpha": {
                     "type": "number",
                     "default": 1,
-                    "propertyOrder": 75 
+                    "propertyOrder": 75
                 },
                 "top": {
                     "type": "number",
