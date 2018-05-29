@@ -62,6 +62,7 @@ ForgePlugins.OrientationKeeper.prototype =
       if (FORGE.Device.gyroscope === false) {
         return;
       }
+      this.viewer.story.onSceneLoadStart.remove(this.sceneLoadHandler, this);
       this.viewer.gyroscope.onDeviceOrientationChange.remove(this.gyroHandler, this);
       this.viewer.gyroscope.onScreenOrientationChange.remove(this.orientationChangeHandler, this);
     },
@@ -136,7 +137,9 @@ ForgePlugins.OrientationKeeper.prototype =
 
     changeSceneOrientation: function() {
       console.log("Disabling gyro");
-      this._gyroscope.enabled = false;
+      if (this._gyroscope) {
+        this._gyroscope.enabled = false;
+      }
       var currentYaw = this._camera.yaw;
       console.log("yaw at start of scene is", currentYaw);
       this._sceneAdjustmentYaw = this._currentTargetYaw-currentYaw+360;
