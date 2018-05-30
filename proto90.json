@@ -42,14 +42,15 @@
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "SVENSKA 🡲",
+                                "value": "Svenska",
                                 "horizontalCenter": true,
                                 "width": 300,
                                 "height": 200,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 50,
-                                "left": 0
+                                "bottom": 0,
+                                "left": 0,
+                                "verticalCenter": true
                             }
                         }
                     ]
@@ -164,13 +165,87 @@
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "VIDARE 🡲",
+                                "value": "VIDARE",
                                 "horizontalCenter": true,
                                 "width": 300,
                                 "height": 200,
                                 "right": 0,
                                 "bottom": 25,
                                 "left": 0
+                            }
+                        }
+                    ]
+                },
+                "playlists": {}
+            },
+            {
+                "uid": "a35",
+                "name": "Camera Permission",
+                "slug": "camperm",
+                "description": "Camera permission screen",
+                "tags": [],
+                "media": {
+                    "uid": "image-a35",
+                    "type": "image",
+                    "source": {
+                        "format": "equi",
+                        "url": "assets/grey_360.jpg"
+                    }
+                },
+                "camera": {
+                    "keep": true,
+                    "yaw": {
+                        "default": 0,
+                        "min": -360,
+                        "max": 360
+                    },
+                    "pitch": {
+                        "default": 0,
+                        "min": -90,
+                        "max": 90
+                    },
+                    "roll": {
+                        "default": 0,
+                        "min": 0,
+                        "max": 0
+                    },
+                    "fov": {
+                        "default": 90,
+                        "min": 30,
+                        "max": 120
+                    },
+                    "gaze": {
+                        "delay": 2,
+                        "cursor": {},
+                        "object": {}
+                    }
+                },
+                "hotspots": [],
+                "plugins": {
+                    "instances": [
+                        {
+                            "uid": "delayedactions-a35",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "action-next",
+                                        "delay": 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "uid": "arview-a35",
+                            "engine": "se.ri.arview",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "facing": "back",
+                                "delay": 0,
+                                "markers": []
                             }
                         }
                     ]
@@ -222,7 +297,7 @@
                                 "click": "action-next"
                             },
                             "options": {
-                                "url": "assets/bg_water.jpg",
+                                "url": "assets/a30_photo.jpg",
                                 "alpha": 1,
                                 "maximized": true,
                                 "horizontalCenter": true,
@@ -492,7 +567,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-next",
-                                        "delay": 15
+                                        "delay": 23
                                     }
                                 ]
                             }
@@ -501,11 +576,8 @@
                             "uid": "simplevideo-a50-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/a50_voice.mp4"
+                                "video": "assets/a50_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -513,8 +585,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -531,13 +603,14 @@
                 "name": "Park Center",
                 "slug": "park",
                 "description": "Center of the Park",
+                "startingYaw": 1,
                 "tags": [],
                 "media": {
                     "uid": "image-a60",
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/a70_360.jpg"
+                        "url": "assets/a60_360.jpg"
                     }
                 },
                 "camera": {
@@ -574,16 +647,16 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": -29,
-                                "phi": 44,
+                                "theta": -33,
+                                "phi": 50,
                                 "radius": 100
                             }
                         },
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 33,
-                                "height": 45
+                                "width": 40,
+                                "height": 40
                             }
                         },
                         "material": {
@@ -621,7 +694,7 @@
                         },
                         "events": {
                             "onClick": [
-                                "action-next"
+                                "action-to-loco-a70"
                             ]
                         }
                     }
@@ -632,11 +705,8 @@
                             "uid": "simplevideo-a60-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/a60_voice.mp4"
+                                "video": "assets/a60_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -644,8 +714,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -711,12 +781,13 @@
                             },
                             "options": {
                                 "autoPlay": true,
-                                "loop": false,
+                                "loop": true,
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
+                                "alpha": 0.8,
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -731,7 +802,7 @@
                             "options": {
                                 "actions": [
                                     {
-                                        "actionUID": "action-next",
+                                        "actionUID": "action-backtocenter-a60",
                                         "delay": 114
                                     }
                                 ]
@@ -741,11 +812,8 @@
                             "uid": "simplevideo-a60a-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/a60a_voice.mp4"
+                                "video": "assets/a60a_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -753,8 +821,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -831,7 +899,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-next",
-                                        "delay": 48
+                                        "delay": 68 
                                     }
                                 ]
                             }
@@ -859,11 +927,8 @@
                             "uid": "simplevideo-a70-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/a70_voice.mp4"
+                                "video": "assets/a70_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -871,8 +936,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -975,6 +1040,7 @@
                 "name": "360 Bridge Center",
                 "slug": "360bridge",
                 "description": "360 Bridge Panorama",
+                "startingYaw": 5,
                 "tags": [],
                 "media": {
                     "uid": "image-b10",
@@ -1018,8 +1084,8 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 30,
-                                "phi": -20,
+                                "theta": 38,
+                                "phi": -15,
                                 "radius": 100
                             },
                             "rotation": {}
@@ -1027,8 +1093,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 50,
-                                "height": 30
+                                "width": 45,
+                                "height": 45
                             }
                         },
                         "material": {
@@ -1047,8 +1113,8 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 0,
-                                "phi": 0,
+                                "theta": -20,
+                                "phi": -55,
                                 "radius": 100
                             },
                             "rotation": {
@@ -1060,12 +1126,12 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 50,
-                                "height": 50
+                                "width": 45,
+                                "height": 45
                             }
                         },
                         "material": {
-                            "image": "assets/b10a_trigger.jpg",
+                            "image": "assets/b10b_trigger.jpg",
                             "opacity": 1,
                             "mediaType": "image"
                         },
@@ -1080,7 +1146,7 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": -105,
+                                "theta": -70,
                                 "phi": 0,
                                 "radius": 100
                             }
@@ -1088,8 +1154,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 40,
-                                "height": 30
+                                "width": 45,
+                                "height": 45
                             }
                         },
                         "material": {
@@ -1117,8 +1183,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 30,
-                                "height": 30
+                                "width": 45,
+                                "height": 45
                             }
                         },
                         "material": {
@@ -1137,7 +1203,7 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 230,
+                                "theta": 250,
                                 "phi": -20,
                                 "radius": 100
                             }
@@ -1215,20 +1281,17 @@
                             "uid": "simplevideo-b10a",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-backtocenter-b10"
-                            },
                             "data": {
                                 "video": "assets/b10a_film.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
-                                "loop": false,
+                                "loop": true,
                                 "volume": 0,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -1239,11 +1302,11 @@
                             "uid": "simplevideo-b10a-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/b10a_voice.mp4"
+                                "video": "assets/b10a_voice_sv.mp4"
+                            },
+                            "events": {
+                                "onEnded": "action-backtocenter-b10"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -1251,8 +1314,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -1313,9 +1376,6 @@
                             "uid": "simplevideo-b10b",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-backtocenter-b10"
-                            },
                             "data": {
                                 "video": "assets/b10b_film.mp4"
                             },
@@ -1325,8 +1385,8 @@
                                 "volume": 0,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -1334,14 +1394,25 @@
                             }
                         },
                         {
+                            "uid": "delayedactions-b10b",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "action-backtocenter-b10",
+                                        "delay": 116
+                                    }
+                                ]
+                            }
+                        },
+                        {
                             "uid": "simplevideo-b10b-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/b10b_voice.mp4"
+                                "video": "assets/b10b_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -1349,8 +1420,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -1416,7 +1487,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-backtocenter-b10",
-                                        "delay": 80
+                                        "delay": 110
                                     }
                                 ]
                             }
@@ -1434,8 +1505,8 @@
                                 "volume": 0,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -1446,11 +1517,8 @@
                             "uid": "simplevideo-b10c-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/b10c_voice.mp4"
+                                "video": "assets/b10c_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -1458,8 +1526,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -1520,35 +1588,8 @@
                             "uid": "simplevideo-b10d",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-backtocenter-b10"
-                            },
                             "data": {
                                 "video": "assets/b10d_film.mp4"
-                            },
-                            "options": {
-                                "autoPlay": true,
-                                "loop": false,
-                                "volume": 0,
-                                "horizontalCenter": true,
-                                "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
-                                "top": 0,
-                                "right": 0,
-                                "bottom": 0,
-                                "left": 0
-                            }
-                        },
-                        {
-                            "uid": "simplevideo-b10d-voice",
-                            "engine": "org.forgejs.simplevideo",
-                            "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
-                            "data": {
-                                "video": "assets/b10d_voice.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -1556,8 +1597,43 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "delayedactions-b10d",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "action-backtocenter-b10",
+                                        "delay": 185
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "uid": "simplevideo-b10d-voice",
+                            "engine": "org.forgejs.simplevideo",
+                            "keep": false,
+                            "data": {
+                                "video": "assets/b10d_voice_sv.mp4"
+                            },
+                            "options": {
+                                "autoPlay": true,
+                                "loop": false,
+                                "volume": 1,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -1636,11 +1712,8 @@
                             "uid": "simplevideo-b20-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/b20_voice"
+                                "video": "assets/b20_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -1648,8 +1721,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -1683,7 +1756,7 @@
                             "options": {
                                 "actions": [
                                     {
-                                        "actionUID": "action-next",
+                                        "actionUID": "hide-button-b20",
                                         "delay": 0
                                     }
                                 ]
@@ -1697,7 +1770,7 @@
                             "options": {
                                 "actions": [
                                     {
-                                        "actionUID": "action-next",
+                                        "actionUID": "show-button-b20",
                                         "delay": 58
                                     }
                                 ]
@@ -1761,7 +1834,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-next",
-                                        "delay": 15
+                                        "delay": 12
                                     }
                                 ]
                             }
@@ -1880,12 +1953,13 @@
                 "slug": "squarecenter",
                 "description": "The Square Center",
                 "tags": [],
+                "startingYaw": 15,
                 "media": {
                     "uid": "image-c10",
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/c20_360.jpg"
+                        "url": "assets/c10_360.jpg"
                     }
                 },
                 "camera": {
@@ -1922,7 +1996,7 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 315,
+                                "theta": 285,
                                 "phi": 13,
                                 "radius": 100
                             }
@@ -1930,8 +2004,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 30,
-                                "height": 30
+                                "width": 35,
+                                "height": 35
                             }
                         },
                         "material": {
@@ -1950,7 +2024,7 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 355,
+                                "theta": 325,
                                 "phi": 13,
                                 "radius": 100
                             }
@@ -1958,8 +2032,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 30,
-                                "height": 30
+                                "width": 35,
+                                "height": 35
                             }
                         },
                         "material": {
@@ -1978,16 +2052,16 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 245,
-                                "phi": 30,
+                                "theta": 255,
+                                "phi": 0,
                                 "radius": 100
                             }
                         },
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 30,
-                                "height": 40
+                                "width": 35,
+                                "height": 35
                             }
                         },
                         "material": {
@@ -2002,11 +2076,39 @@
                         }
                     },
                     {
+                        "uid": "hotspot-c10d",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": 215,
+                                "phi": 30,
+                                "radius": 100
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 35,
+                                "height": 35
+                            }
+                        },
+                        "material": {
+                            "image": "assets/c10d_trigger.jpg",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "action-loadscene-c10d"
+                            ]
+                        }
+                    },
+                    {
                         "uid": "hotspot-c10e",
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 30,
+                                "theta": 1,
                                 "phi": 20,
                                 "radius": 100
                             }
@@ -2014,8 +2116,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 30,
-                                "height": 30
+                                "width": 35,
+                                "height": 35
                             }
                         },
                         "material": {
@@ -2034,7 +2136,7 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 60,
+                                "theta": 30,
                                 "phi": -5,
                                 "radius": 100
                             }
@@ -2042,8 +2144,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 30,
-                                "height": 30
+                                "width": 35,
+                                "height": 35
                             }
                         },
                         "material": {
@@ -2112,20 +2214,17 @@
                             "uid": "simplevideo-c10a",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-backtocenter-c10"
-                            },
                             "data": {
                                 "video": "assets/c10a_film.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
-                                "loop": false,
+                                "loop": true,
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -2137,10 +2236,10 @@
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
                             "events": {
-                                "onEnded": "action-next"
+                                "onEnded": "action-backtocenter-c10"
                             },
                             "data": {
-                                "video": "assets/c10a_voice.mp4"
+                                "video": "assets/c10a_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -2148,8 +2247,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -2222,8 +2321,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -2234,11 +2333,8 @@
                             "uid": "simplevideo-c10b-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/c10b_voice.mp4"
+                                "video": "assets/c10b_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -2246,8 +2342,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -2320,8 +2416,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -2332,11 +2428,8 @@
                             "uid": "simplevideo-c10c-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/c10c_voice.mp4"
+                                "video": "assets/c10c_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -2344,8 +2437,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -2406,9 +2499,6 @@
                             "uid": "simplevideo-c10d",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-backtocenter-c10"
-                            },
                             "data": {
                                 "video": "assets/c10d_film.mp4"
                             },
@@ -2418,8 +2508,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -2431,10 +2521,10 @@
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
                             "events": {
-                                "onEnded": "action-next"
+                                "onEnded": "action-backtocenter-c10"
                             },
                             "data": {
-                                "video": "assets/c10d_voice.mp4"
+                                "video": "assets/c10d_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -2442,8 +2532,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -2504,20 +2594,17 @@
                             "uid": "simplevideo-c10e",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-backtocenter-c10"
-                            },
                             "data": {
                                 "video": "assets/c10e_film.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
-                                "loop": false,
+                                "loop": true,
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -2528,11 +2615,11 @@
                             "uid": "simplevideo-c10e-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/c10e_voice.mp4"
+                                "video": "assets/c10e_voice_sv.mp4"
+                            },
+                            "events": {
+                                "onEnded": "action-backtocenter-c10"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -2540,8 +2627,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -2607,7 +2694,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-next",
-                                        "delay": 43
+                                        "delay": 40
                                     }
                                 ]
                             }
@@ -2634,11 +2721,8 @@
                             "uid": "simplevideo-c20-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/c20_voice.mp4"
+                                "video": "assets/c20_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -2646,8 +2730,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -2750,13 +2834,14 @@
                 "name": "Lower Bridge",
                 "slug": "bridgelower",
                 "description": "",
+                "startingYaw": 1,
                 "tags": [],
                 "media": {
                     "uid": "image-d10",
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/d20_360.jpg"
+                        "url": "assets/d10_360.jpg"
                     }
                 },
                 "camera": {
@@ -2801,8 +2886,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 40,
+                                "height": 40
                             }
                         },
                         "material": {
@@ -2862,8 +2947,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 50,
-                                "height": 50
+                                "width": 40,
+                                "height": 40
                             }
                         },
                         "material": {
@@ -2882,8 +2967,8 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 0,
-                                "phi": 0,
+                                "theta": 40,
+                                "phi": -30,
                                 "radius": 100
                             },
                             "rotation": {
@@ -2895,8 +2980,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 50,
-                                "height": 50
+                                "width": 40,
+                                "height": 40
                             }
                         },
                         "material": {
@@ -2911,7 +2996,7 @@
                         }
                     },
                     {
-                        "uid": "hotspot-d10",
+                        "uid": "hotspot-d10-d20",
                         "facingCenter": true,
                         "transform": {
                             "position": {
@@ -2923,8 +3008,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 30,
-                                "height": 30
+                                "width": 40,
+                                "height": 40
                             }
                         },
                         "material": {
@@ -2993,9 +3078,6 @@
                             "uid": "simplevideo-d10a",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-backtocenter-d10"
-                            },
                             "data": {
                                 "video": "assets/d10a_film.mp4"
                             },
@@ -3005,8 +3087,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -3014,14 +3096,25 @@
                             }
                         },
                         {
+                            "uid": "delayedactions-d10a",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "action-backtocenter-d10",
+                                        "delay": 172 
+                                    }
+                                ]
+                            }
+                        },
+                        {
                             "uid": "simplevideo-d10a-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/d10a_voice.mp4"
+                                "video": "assets/d10a_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -3029,8 +3122,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -3103,8 +3196,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -3115,11 +3208,8 @@
                             "uid": "simplevideo-d10b-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/d10b_voice.mp4"
+                                "video": "assets/d10b_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -3127,8 +3217,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -3189,9 +3279,6 @@
                             "uid": "simplevideo-d10c",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-backtocenter-d10"
-                            },
                             "data": {
                                 "video": "assets/d10c_film.mp4"
                             },
@@ -3201,8 +3288,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -3214,11 +3301,11 @@
                             "uid": "simplevideo-d10c-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
                             "data": {
-                                "video": "assets/d10c_voice.mp4"
+                                "video": "assets/d10c_voice_sv.mp4"
+                            },
+                            "events": {
+                                "onEnded": "action-backtocenter-d10"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -3226,8 +3313,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -3242,7 +3329,7 @@
             {
                 "uid": "d10d",
                 "name": "Ljudkonstverk",
-                "slug": "Ljudkonstverk",
+                "slug": "ljudkonstverk",
                 "description": "",
                 "tags": [],
                 "media": {
@@ -3285,28 +3372,14 @@
                 "plugins": {
                     "instances": [
                         {
-                            "uid": "delayedactions-0",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "action-backtocenter-d10",
-                                        "delay": 0
-                                    }
-                                ]
-                            }
-                        },
-                        {
                             "uid": "simplevideo-d10d-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
                             "events": {
-                                "onEnded": "action-next"
+                                "onEnded": "action-backtocenter-d10"
                             },
                             "data": {
-                                "video": "assets/d10d_voice.mp4"
+                                "video": "assets/d10d_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -3314,8 +3387,8 @@
                                 "volume": 1,
                                 "horizontalCenter": true,
                                 "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
+                                "width": "100%",
+                                "height": "100%",
                                 "alpha": 1,
                                 "top": 0,
                                 "right": 0,
@@ -3384,6 +3457,28 @@
                             }
                         },
                         {
+                            "uid": "simplevideo-d20-voice",
+                            "engine": "org.forgejs.simplevideo",
+                            "keep": false,
+                            "data": {
+                                "video": "assets/d20_voice_sv.mp4"
+                            },
+                            "options": {
+                                "autoPlay": true,
+                                "loop": false,
+                                "volume": 1,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": "100%",
+                                "height": "100%",
+                                "alpha": 1,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        },
+                        {
                             "uid": "simplebutton-d20",
                             "engine": "org.forgejs.simplebutton",
                             "keep": false,
@@ -3391,7 +3486,7 @@
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "Nästa",
+                                "value": "Tack",
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
                                 "width": 300,
@@ -3403,28 +3498,31 @@
                             }
                         },
                         {
-                            "uid": "simplevideo-d20-voice",
-                            "engine": "org.forgejs.simplevideo",
+                            "uid": "delayedactions-b20-hide",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-next"
-                            },
-                            "data": {
-                                "video": "assets/d20_voice.mp4"
-                            },
                             "options": {
-                                "autoPlay": true,
-                                "loop": false,
-                                "volume": 1,
-                                "horizontalCenter": true,
-                                "verticalCenter": true,
-                                "width": 960,
-                                "height": 500,
-                                "alpha": 1,
-                                "top": 0,
-                                "right": 0,
-                                "bottom": 0,
-                                "left": 0
+                                "actions": [
+                                    {
+                                        "actionUID": "hide-button-b20",
+                                        "delay": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "uid": "delayedactions-b20-show",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "show-button-b20",
+                                        "delay": 40
+                                    }
+                                ]
                             }
                         }
                     ]
@@ -3488,7 +3586,7 @@
                             }
                         },
                         {
-                            "uid": "simpletext-d40-0",
+                            "uid": "simpletext-d30-0",
                             "engine": "org.forgejs.simpletext",
                             "keep": false,
                             "options": {
@@ -3500,17 +3598,17 @@
                                 "config": {
                                     "i18n": false,
                                     "value": "SLUT",
+                                    "fontSize": 36,
                                     "fontFamily": "futura-pt, sans-serif",
                                     "fontStyle": "normal",
                                     "fontWeight": 700,
-                                    "fontSize": 36,
                                     "color": "#f7f6f2",
                                     "textAlign": "center"
                                 }
                             }
                         },
                         {
-                            "uid": "simpletext-d40-1",
+                            "uid": "simpletext-d30-1",
                             "engine": "org.forgejs.simpletext",
                             "keep": false,
                             "options": {
@@ -3522,10 +3620,10 @@
                                 "config": {
                                     "i18n": false,
                                     "value": "Nu är turen i Kvarnbyn slut __ Om du har lånat utrustning, gå nu och lämna tillbaka den __ Vill du veta mer om Kvarnbyn, välkommen till Mölndals Stadsmuseum museum.molndal.se __ Vill du upptäcka fler platser i Mölndal? Fortsätt på www.entermolndal.se",
+                                    "fontSize": 20,
                                     "fontFamily": "futura-pt, sans-serif",
                                     "fontStyle": "normal",
                                     "fontWeight": 700,
-                                    "fontSize": 20,
                                     "color": "#f7f6f2",
                                     "textAlign": "center"
                                 }
@@ -3669,7 +3767,7 @@
             "method": {
                 "name": "loadScene",
                 "args": [
-                    "b20"
+                    "b10"
                 ]
             }
         },
@@ -3814,16 +3912,6 @@
             }
         },
         {
-            "uid": "action-loadscene-a60a",
-            "target": "viewer.story",
-            "method": {
-                "name": "loadScene",
-                "args": [
-                    "a70a"
-                ]
-            }
-        },
-        {
             "uid": "action-selfie",
             "target": "window",
             "method": {
@@ -3897,7 +3985,7 @@
             "method": {
                 "name": "loadScene",
                 "args": [
-                    "d30"
+                    "d10c"
                 ]
             }
         },
@@ -3995,6 +4083,26 @@
             "uid": "show-button-c10",
             "target": {
                 "identifier": "simplebutton-c10",
+                "accessor": "actions"
+            },
+            "method": {
+                "name": "show"
+            }
+        },
+        {
+            "uid": "hide-button-d20",
+            "target": {
+                "identifier": "simplebutton-d20",
+                "accessor": "actions"
+            },
+            "method": {
+                "name": "hide"
+            }
+        },
+        {
+            "uid": "show-button-d20",
+            "target": {
+                "identifier": "simplebutton-d20",
                 "accessor": "actions"
             },
             "method": {
