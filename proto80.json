@@ -152,7 +152,7 @@
                                     "fontStyle": "normal",
                                     "fontWeight": 700,
                                     "color": "#f7f6f2",
-                                    "textAlign": "center" 
+                                    "textAlign": "center"
                                 }
                             }
                         },
@@ -249,27 +249,9 @@
                                     "i18n": false,
                                     "value": "VÄLKOMMEN",
                                     "fontSize": 36,
-                                    "font": "Open Sans",
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "simpletext-a30-1",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 80,
-                                "right": 100,
-                                "left": 100,
-                                "config": {
-                                    "i18n": false,
-                                    "value": "VÄLKOMMEN",
-                                    "fontSize": 20,
-                                    "font": "Open Sans",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
                                     "color": "#f7f6f2",
                                     "textAlign": "center"
                                 }
@@ -289,7 +271,9 @@
                                     "i18n": false,
                                     "value": "Ta dig till startplatsen och gör dig redo",
                                     "fontSize": 20,
-                                    "font": "Open Sans",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
                                     "color": "#f7f6f2",
                                     "textAlign": "center"
                                 }
@@ -307,9 +291,11 @@
                                 "left": 100,
                                 "config": {
                                     "i18n": false,
-                                    "value": "1. Ta dig till Fiskeflötet i Kvarnbyn, Mölndal",
+                                    "value": "1. Ta dig till parken vid Forsebron i Kvarnbyn, Mölndal",
                                     "fontSize": 20,
-                                    "font": "Open Sans",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
                                     "color": "#f7f6f2",
                                     "textAlign": "center"
                                 }
@@ -329,7 +315,9 @@
                                     "i18n": false,
                                     "value": "2. Ta på dig hörlurarna",
                                     "fontSize": 20,
-                                    "font": "Open Sans",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
                                     "color": "#f7f6f2",
                                     "textAlign": "center"
                                 }
@@ -347,9 +335,11 @@
                                 "left": 100,
                                 "config": {
                                     "i18n": false,
-                                    "value": "3. Hitta bänkarna i lilla parken vid Fiskeflötet. Sätt dig på bänken så du ser bron som går över vattnet.",
+                                    "value": "3. Hitta bänkarna i den lilla par. Sätt dig på bänken så du ser bron som går över forsen.",
                                     "fontSize": 20,
-                                    "font": "Open Sans",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
                                     "color": "#f7f6f2",
                                     "textAlign": "center"
                                 }
@@ -367,9 +357,11 @@
                                 "left": 100,
                                 "config": {
                                     "i18n": false,
-                                    "value": "4. Tryck på start",
+                                    "value": "4. Håll telefonen ligga och tryck på start",
                                     "fontSize": 20,
-                                    "font": "Open Sans",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
                                     "color": "#f7f6f2",
                                     "textAlign": "center"
                                 }
@@ -3508,8 +3500,10 @@
                                 "config": {
                                     "i18n": false,
                                     "value": "SLUT",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
                                     "fontSize": 36,
-                                    "font": "Open Sans",
                                     "color": "#f7f6f2",
                                     "textAlign": "center"
                                 }
@@ -3527,89 +3521,11 @@
                                 "left": 0,
                                 "config": {
                                     "i18n": false,
-                                    "value": "Tack",
+                                    "value": "Nu är turen i Kvarnbyn slut __ Om du har lånat utrustning, gå nu och lämna tillbaka den __ Vill du veta mer om Kvarnbyn, välkommen till Mölndals Stadsmuseum museum.molndal.se __ Vill du upptäcka fler platser i Mölndal? Fortsätt på www.entermolndal.se",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
                                     "fontSize": 20,
-                                    "font": "Open Sans",
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "simpletext-d40-2",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 120,
-                                "right": 0,
-                                "left": 0,
-                                "config": {
-                                    "i18n": false,
-                                    "value": "Nu är turen i Kvarnbyn slut",
-                                    "fontSize": 20,
-                                    "font": "Open Sans",
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "simpletext-d40-3",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 160,
-                                "right": 0,
-                                "left": 0,
-                                "config": {
-                                    "i18n": false,
-                                    "value": "Om du har lånat utrustning, gå nu och lämna tillbaka den.",
-                                    "fontSize": 20,
-                                    "font": "Open Sans",
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "simpletext-d40-4",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 200,
-                                "right": 0,
-                                "left": 0,
-                                "config": {
-                                    "i18n": false,
-                                    "value": "Vill du veta mer om Kvarnbyn, välkommen till Mölndals Stadsmuseum: museum.molndal.se",
-                                    "fontSize": 20,
-                                    "font": "Open Sans",
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "simpletext-d40-5",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 270,
-                                "right": 0,
-                                "left": 0,
-                                "config": {
-                                    "i18n": false,
-                                    "value": "Vill du upptäcka fler offentliga platser i Mölndal? Börja på www.entermolndal.se",
-                                    "fontSize": 20,
-                                    "font": "Open Sans",
                                     "color": "#f7f6f2",
                                     "textAlign": "center"
                                 }
