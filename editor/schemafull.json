@@ -1034,11 +1034,7 @@
 													"headerTemplate": "{{self.uid}}",
 													"properties": {
 														"uid": {
-															"type": "string",
-															"template": "simplevideo-{{scene_uid}}",
-															"watch": {
-																"scene_uid": "curr_scene.uid"
-															}
+															"type": "string"
 														},
 														"engine": {
 															"type": "string",
