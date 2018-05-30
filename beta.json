@@ -439,7 +439,7 @@
                             "keep": false,
                             "events": {},
                             "options": {
-                                "url": "assets/a50a_photo.jpg",
+                                "url": "assets/a50_photo.jpg",
                                 "alpha": 1,
                                 "maximized": true,
                                 "horizontalCenter": true,
@@ -478,7 +478,7 @@
                             "options": {
                                 "actions": [
                                     {
-                                        "actionUID": "action-next",
+                                        "actionUID": "hide-button-a50",
                                         "delay": 0
                                     }
                                 ]
@@ -492,7 +492,7 @@
                             "options": {
                                 "actions": [
                                     {
-                                        "actionUID": "action-next",
+                                        "actionUID": "show-button-a50",
                                         "delay": 23
                                     }
                                 ]
@@ -755,7 +755,8 @@
                                 "bottom": 0,
                                 "left": 0
                             }
-                        }                    ]
+                        }
+                    ]
                 },
                 "playlists": {}
             },
@@ -813,7 +814,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-next",
-                                        "delay": 68 
+                                        "delay": 68
                                     }
                                 ]
                             }
@@ -3018,7 +3019,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-backtocenter-d10",
-                                        "delay": 172 
+                                        "delay": 172
                                     }
                                 ]
                             }
@@ -3942,9 +3943,9 @@
             }
         },
         {
-            "uid": "hide-button-a50a",
+            "uid": "hide-button-a50",
             "target": {
-                "identifier": "simplebutton-a50a",
+                "identifier": "simplebutton-a50",
                 "accessor": "actions"
             },
             "method": {
@@ -3952,9 +3953,9 @@
             }
         },
         {
-            "uid": "show-button-a50a",
+            "uid": "show-button-a50",
             "target": {
-                "identifier": "simplebutton-a50a",
+                "identifier": "simplebutton-a50",
                 "accessor": "actions"
             },
             "method": {
