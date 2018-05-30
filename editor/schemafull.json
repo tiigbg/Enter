@@ -52,6 +52,10 @@
 									"default": "AUTO_TRANSITION"
 								}
 							},
+							"startingYaw": {
+								"type": "number",
+								"propertyOrder": 55
+							},
 							"media": {
 								"title": "360 media",
 								"propertyOrder": 60,
@@ -871,9 +875,10 @@
 																			"type": "number",
 																			"default": 36
 																		},
-																		"font": {
+																		"fontFamily": {
 																			"type": "string",
 																			"enum": [
+																				"futura-pt, sans-serif",
 																				"Open Sans",
 																				"Arial, Helvetica, sans-serif",
 																				"'Arial Black', Gadget, sans-serif",
@@ -882,7 +887,15 @@
 																				"Georgia, serif",
 																				"'Times New Roman', Times, serif"
 																			],
-																			"default": "Arial, Helvetica, sans-serif"
+																			"default": "futura-pt, sans-serif"
+																		},
+																		"fontStyle": {
+																			"type": "string",
+																			"default": "normal"
+																		},
+																		"fontWeight": {
+																			"type": "number",
+																			"default": 700
 																		},
 																		"color": {
 																			"type": "string",
@@ -1073,8 +1086,19 @@
 															"type": "object",
 															"properties": {
 																"video": {
-																	"type": "string",
-																	"default": "assets/"
+																	"oneOf": [
+																		{
+																			"type": "string",
+																			"default": "assets/"
+																		},
+																		{
+																			"type": "array",
+																			"items": {
+																				"type": "string",
+																				"default": "assets/"
+																			}
+																		}
+																	]
 																}
 															},
 															"propertyOrder": 50
@@ -1112,13 +1136,13 @@
 																	"propertyOrder": 50
 																},
 																"width": {
-																	"type": "number",
-																	"default": 960,
+																	"type": "string",
+																	"default": "100%",
 																	"propertyOrder": 60
 																},
 																"height": {
-																	"type": "number",
-																	"default": 500,
+																	"type": "string",
+																	"default": "100%",
 																	"propertyOrder": 70
 																},
 																"alpha": {

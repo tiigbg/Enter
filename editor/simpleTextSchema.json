@@ -70,9 +70,10 @@
                             "type": "number",
                             "default": 36
                         },
-                        "font": {
+                        "fontFamily": {
                             "type": "string",
                             "enum": [
+                                "futura-pt, sans-serif",
                                 "Open Sans",
                                 "Arial, Helvetica, sans-serif",
                                 "'Arial Black', Gadget, sans-serif",
@@ -81,7 +82,15 @@
                                 "Georgia, serif",
                                 "'Times New Roman', Times, serif"
                             ],
-                            "default": "Arial, Helvetica, sans-serif"
+                            "default": "futura-pt, sans-serif"
+                        },
+                        "fontStyle": {
+                            "type": "string",
+                            "default":  "normal"
+                        },
+                        "fontWeight": {
+                            "type": "number",
+                            "default": 700
                         },
                         "color": {
                             "type": "string",
