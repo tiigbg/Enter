@@ -35,6 +35,25 @@
                             }
                         },
                         {
+                            "uid": "simpleimage-a10-1",
+                            "engine": "org.forgejs.simpleimage",
+                            "keep": false,
+                            "events": {},
+                            "options": {
+                                "url": "assets/rotate_white.png",
+                                "alpha": 1,
+                                "maximized": false,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": 300,
+                                "height": 200,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        },
+                        {
                             "uid": "simplebutton-a10",
                             "engine": "org.forgejs.simplebutton",
                             "keep": false,
@@ -48,9 +67,8 @@
                                 "height": 200,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 0,
-                                "left": 0,
-                                "verticalCenter": true
+                                "bottom": 50,
+                                "left": 0
                             }
                         }
                     ]
@@ -713,7 +731,7 @@
                                 "verticalCenter": true,
                                 "width": "100%",
                                 "height": "100%",
-                                "alpha": 0.8,
+                                "alpha": 1,
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -936,7 +954,7 @@
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "Jag är här",
+                                "value": "Jag är här nu",
                                 "horizontalCenter": true,
                                 "width": 300,
                                 "height": 200,
@@ -1317,7 +1335,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-backtocenter-b10",
-                                        "delay": 116
+                                        "delay": 96
                                     }
                                 ]
                             }
@@ -2729,7 +2747,7 @@
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "Jag är här",
+                                "value": "Jag är här nu",
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
                                 "width": 300,
@@ -3379,17 +3397,6 @@
                 "plugins": {
                     "instances": [
                         {
-                            "uid": "arview-d20",
-                            "engine": "se.ri.arview",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "facing": "front",
-                                "delay": 0,
-                                "markers": []
-                            }
-                        },
-                        {
                             "uid": "simplevideo-d20-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
@@ -3409,6 +3416,17 @@
                                 "right": 0,
                                 "bottom": 0,
                                 "left": 0
+                            }
+                        },
+                        {
+                            "uid": "arview-d20",
+                            "engine": "se.ri.arview",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "facing": "front",
+                                "delay": 0,
+                                "markers": []
                             }
                         },
                         {
