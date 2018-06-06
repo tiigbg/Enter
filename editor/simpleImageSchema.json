@@ -54,6 +54,13 @@
                     "default": "assets/",
                     "propertyOrder": 10
                 },
+                "i18n": {
+                    "type": "bool",
+                    "format": "checkbox",
+                    "default": false,
+                    "description": "Will use url from locale.json file instead",
+                    "propertyOrder": 15
+                },
                 "alpha": {
                     "type": "number",
                     "default": 1,
@@ -83,7 +90,6 @@
                     "default": null,
                     "description": "If width and height not specified, image will be shown at 100%. Image will otherwise be scaled to fit smallest while keeping ratio",
                     "propertyOrder": 60
-
                 },
                 "height": {
                     "type": "number",

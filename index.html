@@ -59,6 +59,7 @@
       story = JSON.parse(response);
 
       loadPlugins(story, editor);
+      loadLocalizations(story);
 
       // Creation of the FORGE.Viewer
       viewer = new FORGE.Viewer("container", story);

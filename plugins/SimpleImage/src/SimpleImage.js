@@ -24,6 +24,7 @@ ForgePlugins.SimpleImage.prototype = {
             height: this.plugin.options.height,
             alpha: this.plugin.options.alpha,
             key: this.plugin.options.key,
+            i18n: this.plugin.options.i18n,
             url: this.plugin.options.url,
             keepRatio: this.plugin.options.keepRatio,
             maximized: this.plugin.options.maximized

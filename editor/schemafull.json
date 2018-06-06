@@ -975,6 +975,14 @@
 																	"default": "assets/",
 																	"propertyOrder": 10
 																},
+																"i18n": {
+																	"type": "bool",
+																	"format": "checkbox",
+																	"default": false,
+																	"description": "Will use url from locale.json file instead",
+																	"propertyOrder": 15
+
+																},
 																"alpha": {
 																	"type": "number",
 																	"default": 1,
