@@ -18,6 +18,7 @@ ForgePlugins.OrientationKeeper = function () {
   this._posQuatOffset = new THREE.Quaternion(-Math.sqrt(0.5), 0, 0, Math.sqrt(0.5));
   this._posQuatFinal = new THREE.Quaternion();
   this._sceneAdjustmentQuat = null;
+  this._last360SceneUID = null;
 };
 
 ForgePlugins.OrientationKeeper.prototype =
@@ -111,7 +112,6 @@ ForgePlugins.OrientationKeeper.prototype =
     },
 
     orientationChangeHandler: function (event) {
-      //console.log("Current yaw is", this._camera.yaw);
       if (typeof screen.orientation !== "undefined") {
         this._screenOrientation = FORGE.Math.degToRad(screen.orientation.angle);
       }
@@ -123,6 +123,16 @@ ForgePlugins.OrientationKeeper.prototype =
     },
 
     sceneLoadHandler: function () {
+      if (this.viewer.story.scene.config.hotspots.length > 0) {
+        var curUID = this.viewer.story.scene.config.uid;
+        if (curUID !== this._last360SceneUID) {
+          // A new 360 scene, adjusting
+          this._last360SceneUID = this.viewer.story.scene.config.uid;
+        } else {
+          // Same 360 scene as before, don't adjust
+          return;
+        }
+      }
       this._sceneAdjustmentYaw = 0;
       window.yawOffset = 0;
       this._sceneAdjustmentQuat = null;
@@ -132,7 +142,7 @@ ForgePlugins.OrientationKeeper.prototype =
       }
       this._currentTargetYaw = this.viewer.story.scene.config.startingYaw;
       console.log("target yaw is", this._currentTargetYaw);
-      setTimeout(this.changeSceneOrientation.bind(this), 50);
+      setTimeout(this.changeSceneOrientation.bind(this), 150);
     },
 
     changeSceneOrientation: function() {
@@ -152,6 +162,6 @@ ForgePlugins.OrientationKeeper.prototype =
 
     printNewYaw: function() {
       console.log("new yaw is now", this._camera.yaw);
-    }
+    },
 
   };
