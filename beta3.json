@@ -58,7 +58,10 @@
                             "engine": "org.forgejs.simplebutton",
                             "keep": false,
                             "events": {
-                                "onClick": ["action-next", "action-locale-sv"]
+                                "onClick": [
+                                    "action-next",
+                                    "action-locale-sv"
+                                ]
                             },
                             "options": {
                                 "value": "Svenska",
@@ -76,7 +79,10 @@
                             "engine": "org.forgejs.simplebutton",
                             "keep": false,
                             "events": {
-                                "onClick": ["action-next", "action-locale-en"]
+                                "onClick": [
+                                    "action-next",
+                                    "action-locale-en"
+                                ]
                             },
                             "options": {
                                 "value": "English",
@@ -183,7 +189,7 @@
                                 "right": 100,
                                 "left": 100,
                                 "config": {
-                                   "i18n": false,
+                                    "i18n": false,
                                     "value": "För att kunna navigera under promenaden, tillåt telefonen att använda kameran. All info stannar i din egen telefon och används endast under turen __ För att uppleva allt innehåll behöver du ta dig till den verkliga platsen, Kvarnbyn i Mölndal __ Om du vill gå ostört, sätt din telefon i “stör-ej”-läge. För bästa ljudupplevelse, använd bra hörlurar som täcker dina öron __ Du kan låna hörlurar på Mölndals Stadsmuseum under deras öppettider.",
                                     "fontSize": "5vmin",
                                     "fontFamily": "futura-pt, sans-serif",
@@ -195,20 +201,21 @@
                             }
                         },
                         {
-                            "uid": "simplebutton-a20",
-                            "engine": "org.forgejs.simplebutton",
+                            "uid": "imagebutton-a20",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "VIDARE",
+                                "url": "assets/next.png",
                                 "horizontalCenter": true,
                                 "width": 300,
                                 "height": 200,
                                 "right": 0,
                                 "bottom": 25,
-                                "left": 0
+                                "left": 0,
+                                "i18n": true
                             }
                         }
                     ]
@@ -3634,7 +3641,6 @@
                 "name": "locale",
                 "value": "sv-SE",
                 "operation": "set"
-
             }
         },
         {
@@ -3644,7 +3650,6 @@
                 "name": "locale",
                 "value": "en-US",
                 "operation": "set"
-
             }
         },
         {

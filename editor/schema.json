@@ -108,6 +108,10 @@
 													"$ref": "simpleVideoSchema.json"
 												},
 												{
+													"title": "Image Button",
+													"$ref": "imageButtonSchema.json"
+												}
+												{
 													"title": "Button",
 													"$ref": "simpleButtonSchema.json"
 												}

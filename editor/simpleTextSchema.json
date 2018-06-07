@@ -67,8 +67,8 @@
                             "default": ""
                         },
                         "fontSize": {
-                            "type": "number",
-                            "default": 36
+                            "type": "string",
+                            "default": "5vmin"  
                         },
                         "fontFamily": {
                             "type": "string",

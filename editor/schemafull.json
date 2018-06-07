@@ -872,8 +872,8 @@
 																			"default": ""
 																		},
 																		"fontSize": {
-																			"type": "number",
-																			"default": 36
+																			"type": "string",
+																			"default": "5vmin"
 																		},
 																		"fontFamily": {
 																			"type": "string",
@@ -976,12 +976,11 @@
 																	"propertyOrder": 10
 																},
 																"i18n": {
-																	"type": "bool",
+																	"type": "boolean",
 																	"format": "checkbox",
 																	"default": false,
 																	"description": "Will use url from locale.json file instead",
 																	"propertyOrder": 15
-
 																},
 																"alpha": {
 																	"type": "number",
@@ -1177,6 +1176,108 @@
 																	"type": "number",
 																	"default": null,
 																	"propertyOrder": 110
+																}
+															}
+														}
+													}
+												},
+												{
+													"title": "Image Button",
+													"type": "object",
+													"options": {
+														"multiple_editor_select_via_property": {
+															"property": "engine",
+															"value": "se.ri.imagebutton"
+														}
+													},
+													"headerTemplate": "{{self.uid}}",
+													"properties": {
+														"uid": {
+															"type": "string",
+															"default": "imagebutton-0"
+														},
+														"engine": {
+															"type": "string",
+															"default": "se.ri.imagebutton"
+														},
+														"keep": {
+															"options": {
+																"hidden": true
+															},
+															"type": "boolean",
+															"format": "checkbox",
+															"description": "Should the plugin instance be removed on scene switch?",
+															"default": false
+														},
+														"events": {
+															"type": "object",
+															"properties": {
+																"onClick": {
+																	"type": "string",
+																	"watch": {
+																		"actions": "actions"
+																	},
+																	"enumSource": [
+																		{
+																			"source": "actions",
+																			"value": "{{item.uid}}"
+																		}
+																	]
+																}
+															}
+														},
+														"options": {
+															"type": "object",
+															"properties": {
+																"url": {
+																	"type": "string",
+																	"description": "lmage url on the button",
+																	"default": ""
+																},
+																"i18n": {
+																	"type": "boolean",
+																	"format": "checkbox",
+																	"default": false,
+																	"description": "Will use url from locale.json file instead"
+																},
+																"alpha": {
+																	"type": "number",
+																	"default": 1,
+																	"propertyOrder": 20
+																},
+																"horizontalCenter": {
+																	"type": "boolean",
+																	"format": "checkbox",
+																	"default": true
+																},
+																"verticalCenter": {
+																	"type": "boolean",
+																	"format": "checkbox",
+																	"default": false
+																},
+																"width": {
+																	"type": "number",
+																	"default": 300
+																},
+																"height": {
+																	"type": "number",
+																	"default": 200
+																},
+																"top": {
+																	"type": "number",
+																	"default": null
+																},
+																"right": {
+																	"type": "number",
+																	"default": null
+																},
+																"bottom": {
+																	"type": "number",
+																	"default": 50
+																},
+																"left": {
+																	"type": "number",
+																	"default": null
 																}
 															}
 														}

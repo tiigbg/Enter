@@ -1,0 +1,45 @@
+{
+    "uid": "se.ri.imagebutton",
+    "name": "Image Button",
+    "slug": "image-button",
+    "version": "1.0.0",
+    "versionName": "Image Button 1.0.0",
+    "description": "Add a simple button with an image",
+
+    "author": {
+        "name": "Jacob Michelsen <jacob.michelsen@ri.se>",
+        "url": ""
+    },
+
+    "licence": "Apache 2",
+
+    "options":
+    {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null,
+        "horizontalCenter": false,
+        "verticalCenter": false,
+        "keepRatio": true,
+        "i18n": false,
+        "background": "",
+        "url": "assets/next.png",
+        "alpha": 1
+    },
+
+    "events":
+    {
+        "onClick": null,
+        "onOver": null,
+        "onOut": null,
+        "onDown": null
+    },
+
+    "sources":
+    [
+        "src/ImageButton.js"
+    ],
+
+    "constructor": "ForgePlugins.ImageButton"
+}

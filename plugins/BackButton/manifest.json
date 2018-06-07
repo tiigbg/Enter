@@ -28,18 +28,15 @@
         "left": 10,
         "horizontalCenter": false,
         "verticalCenter": false,
+        "maximized": false,
+        "keepratio": true,
+        "alpha": 1,
 
         "width": 300,
         "height": 200,
 
-        "defaultSkin": true,
-        "value": "Tillbaka",
-
-        "skin": {
-            "out": null,
-            "over": null,
-            "down": null
-        }
+        "url": "assets/back.png",
+        "i18n": false
     },
 
     "events":
