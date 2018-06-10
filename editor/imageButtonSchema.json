@@ -51,7 +51,7 @@
                     "default": ""
                 },
                 "i18n": {
-                    "type": "bool",
+                    "type": "boolean",
                     "format": "checkbox",
                     "default": false,
                     "description": "Will use url from locale.json file instead",

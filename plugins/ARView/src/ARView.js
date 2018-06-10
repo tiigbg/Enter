@@ -43,8 +43,8 @@ ForgePlugins.ARView.prototype = {
         {
           audio: false,
           video: {
-            width: { min: 1024, ideal: 1280, max: 1920 },
-            height: { min: 480, ideal: 720, max: 1080 },
+            width: { min: 640, ideal: 1024, max: 1280 },
+            height: { min: 360, ideal: 480, max: 720 },
             facingMode: this.plugin.options.facing === 'back' ? 'environment' : 'user'
           }
         },
