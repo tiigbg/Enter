@@ -80,6 +80,24 @@ ForgePlugins.ImageButton.prototype =
         this.plugin.events.onDown.dispatch();
     },
 
+    /**
+     * Show the image
+     */
+    show: function()
+    {
+        console.log("Show");
+        this._image.show();
+    },
+
+    /**
+     * Hide the image
+     */
+    hide: function()
+    {
+        console.log("Hide");
+        this._image.hide();
+    },
+
     destroy: function()
     {
         this._image = null;

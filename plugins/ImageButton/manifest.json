@@ -36,6 +36,12 @@
         "onDown": null
     },
 
+    "actions":
+    [
+        "show",
+        "hide"
+    ],
+
     "sources":
     [
         "src/ImageButton.js"
