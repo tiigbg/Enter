@@ -22,8 +22,6 @@
 
     "options":
     {
-        "top": null,
-        "right": null,
         "bottom": 10,
         "left": 10,
         "horizontalCenter": false,
@@ -31,9 +29,7 @@
         "maximized": false,
         "keepratio": true,
         "alpha": 1,
-
-        "width": 300,
-        "height": 200,
+        "height": 40,
 
         "url": "assets/back.png",
         "i18n": false

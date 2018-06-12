@@ -1,6 +1,12 @@
 {
-    "pano-welcome": "Welcome!",
-    "pano-instructions": "Look around in your phone",
-    "assets/a20_photo.jpg": "assets/a20_photo_en.jpg",
-    "assets/next.png": "assets/next_en.png"
+    "tips1": "Welcome!",
+    "tips2": "ENG eng eng eng eng eng eng eng eng eng eng eng eng eng eng eng eng eng eng eng",
+    "outro1": "This is the end of the tour of Kvarnbyn.",
+    "outro2": "If you have borrowed any equipment, please go and return it now.",
+    "outro3": "If you would like to know more about Kvarnbyn, you are welcome to visit Mölndal City Museum (Mölndals stadsmuseum)",
+    "outro4": "Want to discover more places in Mölndal? Continue your tour at www.entermolndal.se",
+    "assets/next.png": "assets/next_en.png",
+    "assets/here_now.png": "assets/here_now_en.png",
+    "assets/show_map.png": "assets/show_map_en.png",
+    "assets/thank_you.png": "assets/thank_you_en.png"
 }

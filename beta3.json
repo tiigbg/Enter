@@ -40,22 +40,21 @@
                             "keep": false,
                             "events": {},
                             "options": {
-                                "url": "assets/rotate_white.png",
+                                "url": "assets/turn_screen_line.png",
                                 "alpha": 1,
                                 "maximized": false,
                                 "horizontalCenter": true,
-                                "verticalCenter": true,
-                                "width": 300,
-                                "height": 200,
-                                "top": 0,
+                                "verticalCenter": false,
+                                "width": 200,
+                                "height": 100,
+                                "bottom": 200,
                                 "right": 0,
-                                "bottom": 0,
                                 "left": 0
                             }
                         },
                         {
-                            "uid": "simplebutton-a10-se",
-                            "engine": "org.forgejs.simplebutton",
+                            "uid": "imagebutton-a10-se",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
                                 "onClick": [
@@ -64,19 +63,19 @@
                                 ]
                             },
                             "options": {
-                                "value": "Svenska",
+                                "url": "assets/svenska.png",
+                                "i18n": false,
                                 "horizontalCenter": true,
-                                "width": 300,
-                                "height": 200,
+                                "height": 30,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 100,
+                                "bottom": 120,
                                 "left": 0
                             }
                         },
                         {
-                            "uid": "simplebutton-a10-en",
-                            "engine": "org.forgejs.simplebutton",
+                            "uid": "imagebutton-a10-en",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
                                 "onClick": [
@@ -85,10 +84,10 @@
                                 ]
                             },
                             "options": {
-                                "value": "English",
+                                "url": "assets/english.png",
+                                "i18n": false,
                                 "horizontalCenter": true,
-                                "width": 300,
-                                "height": 200,
+                                "height": 30,
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 50,
@@ -142,8 +141,7 @@
                             "keep": false,
                             "events": {},
                             "options": {
-                                "url": "assets/a20_photo.jpg",
-                                "i18n": true,
+                                "url": "assets/bg_water.jpg",
                                 "alpha": 1,
                                 "maximized": true,
                                 "horizontalCenter": true,
@@ -168,7 +166,7 @@
                                 "left": 0,
                                 "config": {
                                     "i18n": true,
-                                    "value": "pano-welcome",
+                                    "value": "tips1",
                                     "fontSize": "10vmin",
                                     "fontFamily": "futura-pt, sans-serif",
                                     "fontStyle": "normal",
@@ -189,8 +187,8 @@
                                 "right": 100,
                                 "left": 100,
                                 "config": {
-                                    "i18n": false,
-                                    "value": "För att kunna navigera under promenaden, tillåt telefonen att använda kameran. All info stannar i din egen telefon och används endast under turen __ För att uppleva allt innehåll behöver du ta dig till den verkliga platsen, Kvarnbyn i Mölndal __ Om du vill gå ostört, sätt din telefon i “stör-ej”-läge. För bästa ljudupplevelse, använd bra hörlurar som täcker dina öron __ Du kan låna hörlurar på Mölndals Stadsmuseum under deras öppettider.",
+                                    "i18n": true,
+                                    "value": "tips2",
                                     "fontSize": "5vmin",
                                     "fontFamily": "futura-pt, sans-serif",
                                     "fontStyle": "normal",
@@ -211,7 +209,7 @@
                                 "url": "assets/next.png",
                                 "horizontalCenter": true,
                                 "width": 300,
-                                "height": 200,
+                                "height": 30,
                                 "right": 0,
                                 "bottom": 25,
                                 "left": 0,
@@ -413,18 +411,19 @@
                             }
                         },
                         {
-                            "uid": "simplebutton-a30",
-                            "engine": "org.forgejs.simplebutton",
+                            "uid": "imagebutton-a30",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "Start",
+                                "url": "assets/enter.png",
+                                "i18n": false,
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
                                 "width": 300,
-                                "height": 200,
+                                "height": 30,
                                 "bottom": 25
                             }
                         }
@@ -497,17 +496,18 @@
                             }
                         },
                         {
-                            "uid": "simplebutton-a50",
-                            "engine": "org.forgejs.simplebutton",
+                            "uid": "imagebutton-a50",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "Jag är här nu",
+                                "url": "assets/here_now.png",
+                                "i18n": true,
                                 "horizontalCenter": true,
                                 "width": 300,
-                                "height": 200,
+                                "height": 30,
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 50,
@@ -614,7 +614,7 @@
                 "hotspots": [
                     {
                         "uid": "hotspot-a60",
-                        "facingCenter": true,
+                        "facingCenter": false,
                         "transform": {
                             "position": {
                                 "theta": -33,
@@ -645,9 +645,14 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 0,
-                                "phi": 0,
+                                "theta": 10,
+                                "phi": -15,
                                 "radius": 100
+                            },
+                            "rotation": {
+                                "x": 45,
+                                "y": 0,
+                                "z": 0
                             }
                         },
                         "geometry": {
@@ -973,17 +978,18 @@
                             }
                         },
                         {
-                            "uid": "simplebutton-a80",
-                            "engine": "org.forgejs.simplebutton",
+                            "uid": "imagebutton-a80",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "Jag är här nu",
+                                "url": "assets/here_now.png",
+                                "i18n": true,
                                 "horizontalCenter": true,
                                 "width": 300,
-                                "height": 200,
+                                "height": 30,
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 50,
@@ -1690,17 +1696,18 @@
                             }
                         },
                         {
-                            "uid": "simplebutton-b20",
-                            "engine": "org.forgejs.simplebutton",
+                            "uid": "imagebutton-b20",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "Nästa",
+                                "url": "assets/next.png",
+                                "i18n": true,
                                 "horizontalCenter": true,
                                 "width": 300,
-                                "height": 200,
+                                "height": 30,
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 50,
@@ -1884,18 +1891,19 @@
                             }
                         },
                         {
-                            "uid": "simplebutton-b40",
-                            "engine": "org.forgejs.simplebutton",
+                            "uid": "imagebutton-b40",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "Jag är här nu",
+                                "url": "assets/here_now.png",
+                                "i18n": true,
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
                                 "width": 300,
-                                "height": 200,
+                                "height": 30,
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 50,
@@ -2766,18 +2774,19 @@
                             }
                         },
                         {
-                            "uid": "simplebutton-c30",
-                            "engine": "org.forgejs.simplebutton",
+                            "uid": "imagebutton-c30",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "Jag är här nu",
+                                "url": "assets/here_now.png",
+                                "i18n": true,
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
                                 "width": 300,
-                                "height": 200,
+                                "height": 30,
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 50,
@@ -3456,18 +3465,19 @@
                             }
                         },
                         {
-                            "uid": "simplebutton-d20",
-                            "engine": "org.forgejs.simplebutton",
+                            "uid": "imagebutton-d20",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "value": "Tack",
+                                "url": "assets/thank_you.png",
+                                "i18n": true,
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
                                 "width": 300,
-                                "height": 200,
+                                "height": 30,
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 50,
@@ -3569,13 +3579,13 @@
                             "options": {
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
-                                "top": 35,
+                                "top": 20,
                                 "right": 100,
                                 "left": 100,
                                 "config": {
-                                    "i18n": false,
-                                    "value": "SLUT",
-                                    "fontSize": 36,
+                                    "i18n": true,
+                                    "value": "outrofull",
+                                    "fontSize": "5vmin",
                                     "fontFamily": "futura-pt, sans-serif",
                                     "fontStyle": "normal",
                                     "fontWeight": 700,
@@ -3585,19 +3595,38 @@
                             }
                         },
                         {
+                            "uid": "imagebutton-d30",
+                            "engine": "se.ri.imagebutton",
+                            "keep": false,
+                            "events": {
+                                "onClick": "action-goto-map"
+                            },
+                            "options": {
+                                "url": "assets/show_map.png",
+                                "i18n": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": false,
+                                "width": 300,
+                                "height": 30,
+                                "top": 170,
+                                "right": 0,
+                                "left": 0
+                            }
+                        },
+                        {
                             "uid": "simpletext-d30-1",
                             "engine": "org.forgejs.simpletext",
                             "keep": false,
                             "options": {
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
-                                "top": 80,
+                                "top": 230,
                                 "right": 0,
                                 "left": 0,
                                 "config": {
-                                    "i18n": false,
-                                    "value": "Nu är turen i Kvarnbyn slut __ Om du har lånat utrustning, gå nu och lämna tillbaka den __ Vill du veta mer om Kvarnbyn, välkommen till Mölndals Stadsmuseum museum.molndal.se __ Vill du upptäcka fler platser i Mölndal? Fortsätt på www.entermolndal.se",
-                                    "fontSize": 20,
+                                    "i18n": true,
+                                    "value": "outro4",
+                                    "fontSize": "5vmin",
                                     "fontFamily": "futura-pt, sans-serif",
                                     "fontStyle": "normal",
                                     "fontWeight": 700,
@@ -4005,9 +4034,19 @@
             }
         },
         {
+            "uid": "action-goto-map",
+            "target": "window.location",
+            "method": {
+                "name": "assign",
+                "args": [
+                    "https://www.google.com/maps?oe=utf-8&client=firefox-b-ab&q=m%C3%B6lndal+city+museum&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiL8Kbp38nbAhXHOSwKHYGpCLgQ_AUICygC"
+                ]
+            }
+        },
+        {
             "uid": "hide-button-a50",
             "target": {
-                "identifier": "simplebutton-a50",
+                "identifier": "imagebutton-a50",
                 "accessor": "actions"
             },
             "method": {
@@ -4017,7 +4056,7 @@
         {
             "uid": "show-button-a50",
             "target": {
-                "identifier": "simplebutton-a50",
+                "identifier": "imagebutton-a50",
                 "accessor": "actions"
             },
             "method": {
@@ -4027,7 +4066,7 @@
         {
             "uid": "hide-button-b10",
             "target": {
-                "identifier": "simplebutton-b10",
+                "identifier": "imagebutton-b10",
                 "accessor": "actions"
             },
             "method": {
@@ -4037,7 +4076,7 @@
         {
             "uid": "show-button-b10",
             "target": {
-                "identifier": "simplebutton-b10",
+                "identifier": "imagebutton-b10",
                 "accessor": "actions"
             },
             "method": {
@@ -4047,7 +4086,7 @@
         {
             "uid": "hide-button-b20",
             "target": {
-                "identifier": "simplebutton-b20",
+                "identifier": "imagebutton-b20",
                 "accessor": "actions"
             },
             "method": {
@@ -4057,7 +4096,7 @@
         {
             "uid": "show-button-b20",
             "target": {
-                "identifier": "simplebutton-b20",
+                "identifier": "imagebutton-b20",
                 "accessor": "actions"
             },
             "method": {
@@ -4067,7 +4106,7 @@
         {
             "uid": "hide-button-c10",
             "target": {
-                "identifier": "simplebutton-c10",
+                "identifier": "imagebutton-c10",
                 "accessor": "actions"
             },
             "method": {
@@ -4077,7 +4116,7 @@
         {
             "uid": "show-button-c10",
             "target": {
-                "identifier": "simplebutton-c10",
+                "identifier": "imagebutton-c10",
                 "accessor": "actions"
             },
             "method": {
@@ -4087,7 +4126,7 @@
         {
             "uid": "hide-button-d20",
             "target": {
-                "identifier": "simplebutton-d20",
+                "identifier": "imagebutton-d20",
                 "accessor": "actions"
             },
             "method": {
@@ -4097,7 +4136,7 @@
         {
             "uid": "show-button-d20",
             "target": {
-                "identifier": "simplebutton-d20",
+                "identifier": "imagebutton-d20",
                 "accessor": "actions"
             },
             "method": {
