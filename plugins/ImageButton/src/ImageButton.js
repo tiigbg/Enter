@@ -85,7 +85,6 @@ ForgePlugins.ImageButton.prototype =
      */
     show: function()
     {
-        console.log("Show");
         this._image.show();
     },
 
@@ -94,7 +93,6 @@ ForgePlugins.ImageButton.prototype =
      */
     hide: function()
     {
-        console.log("Hide");
         this._image.hide();
     },
 

@@ -1,14 +1,11 @@
 {
-    "tips1": "Välkommen!",
-    "tips2": "För att kunna navigera under promenaden, tillåt telefonen att använda kameran. All info stannar i din egen telefon och används endast under turen __ För att uppleva allt innehåll behöver du ta dig till den verkliga platsen, Kvarnbyn i Mölndal __ Om du vill gå ostört, sätt din telefon i “stör-ej”-läge. För bästa ljudupplevelse, använd bra hörlurar som täcker dina öron __ Du kan låna hörlurar på Mölndals Stadsmuseum under deras öppettider.",
-    "outrofull": "Nu är turen i Kvarnbyn slut __ Om du har lånat utrustning, gå nu och lämna tillbaka den __ Vill du veta mer om Kvarnbyn, välkommen till Mölndals Stadsmuseum",
-    "outro1": "Nu är turen i Kvarnbyn slut",
-    "outro2": "Om du har lånat utrustning, gå nu och lämna tillbaka den.",
-    "outro3": "Vill du veta mer om Kvarnbyn, välkommen till Mölndals Stadsmuseum",
-    "outro4": "Vill du upptäcka fler platser i Mölndal? Fortsätt på www.entermolndal.se",
+    "phone1": "Gör din mobil redo",
+    "phone2": "1. Sätt ljusstyrkan ☼ på max eller auto.<br />2. Sätt webbläsaren i fullskärms-läge:<br />&nbsp;&nbsp;&nbsp;iPhone: Om du ser flikar och adressfält längst upp: Gå till inställningar ➔ Safari, och stäng av “Visa flikfältet”.<br />&nbsp;&nbsp;&nbsp;Android: Dubbeltryck på skärmen för fullskärm.<br />3. Håll din mobilskärm liggande.Om bilden inte följer med, kontrollera att stående riktningslås är av. ↺<br />4. Justera ljudvolymen så du hör bra.",
+    "outro1": "Nu är turen i Kvarnbyn slut.<br />Om du har lånat utrustning, vänligen lämna tillbaka den nu.<br />Vill du veta mer om Kvarnbyn, välkommen till Mölndals stadsmuseum.<br /><br /><br /><br />Vill du upptäcka fler platser i Mölndal? Fortsätt på www.entermolndal.se<br /><br /><br />",
     "assets/a20_photo.jpg": "assets/a20_photo_sv.jpg",
     "assets/next.png": "assets/next_sv.png",
     "assets/here_now.png": "assets/here_now_sv.png",
     "assets/show_map.png": "assets/show_map_sv.png",
-    "assets/thank_you.png": "assets/thank_you_sv.png"
+    "assets/thank_you.png": "assets/thank_you_sv.png",
+    "assets/back_to_start.png": "assets/back_to_start_sv.png"
 }

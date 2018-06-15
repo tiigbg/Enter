@@ -1,12 +1,10 @@
 {
-    "tips1": "Welcome!",
-    "tips2": "ENG eng eng eng eng eng eng eng eng eng eng eng eng eng eng eng eng eng eng eng",
-    "outro1": "This is the end of the tour of Kvarnbyn.",
-    "outro2": "If you have borrowed any equipment, please go and return it now.",
-    "outro3": "If you would like to know more about Kvarnbyn, you are welcome to visit Mölndal City Museum (Mölndals stadsmuseum)",
-    "outro4": "Want to discover more places in Mölndal? Continue your tour at www.entermolndal.se",
+    "phone1": "Getting your phone ready",
+    "phone2": "1. Set brightness ☼ to max or auto.<br />2. Put the browser in fullscreen mode:<br />&nbsp;&nbsp;&nbsp;iPhone: If tabs and the address bar are visible at the top: Go to Settings -> Safari, and turn “Show Tab Bar” off.<br />&nbsp;&nbsp;&nbsp;Android: Double-tap on the screen for fullscreen display.<br />3. Hold your mobile screen horizontally. If the image doesn’t follow, ensure portrait orientation lock is off. ↺<br />4. Adjust the volume so you can hear well.",
+    "outro1": "This is the end of the tour of Kvarnbyn.<br />If you have borrowed equipment, please go and return it now.<br />If you would like to know more about Kvarnbyn, welcome to Mölndals Stadsmuseum<br /><br /><br /><br />Want to discover more places in Mölndal? Continue your tour at www.entermolndal.se<br /><br /><br />",
     "assets/next.png": "assets/next_en.png",
     "assets/here_now.png": "assets/here_now_en.png",
     "assets/show_map.png": "assets/show_map_en.png",
-    "assets/thank_you.png": "assets/thank_you_en.png"
+    "assets/thank_you.png": "assets/thank_you_en.png",
+    "assets/back_to_start.png": "assets/back_to_start_en.png"
 }

@@ -35,16 +35,37 @@
                             }
                         },
                         {
+                            "uid": "simpletext-a10-0",
+                            "engine": "org.forgejs.simpletext",
+                            "keep": false,
+                            "options": {
+                                "horizontalCenter": true,
+                                "verticalCenter": false,
+                                "top": 10,
+                                "right": 0,
+                                "left": 0,
+                                "config": {
+                                    "value": "ENTER Mölndal - Kvarnbyn",
+                                    "fontSize": "10vmin",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
+                                    "color": "#f7f6f2",
+                                    "textAlign": "center"
+                                }
+                            }
+                        },
+                        {
                             "uid": "simpleimage-a10-1",
                             "engine": "org.forgejs.simpleimage",
                             "keep": false,
                             "events": {},
                             "options": {
-                                "url": "assets/turn_screen_line.png",
+                                "url": "assets/turn_screen_double.png",
                                 "alpha": 1,
                                 "maximized": false,
                                 "horizontalCenter": true,
-                                "verticalCenter": false,
+                                "verticalCenter": true,
                                 "width": 200,
                                 "height": 100,
                                 "bottom": 200,
@@ -69,7 +90,7 @@
                                 "height": 30,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 120,
+                                "bottom": 80,
                                 "left": 0
                             }
                         },
@@ -90,7 +111,7 @@
                                 "height": 30,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 50,
+                                "bottom": 20,
                                 "left": 0
                             }
                         }
@@ -99,10 +120,10 @@
                 "playlists": {}
             },
             {
-                "uid": "a20",
-                "name": "Tips",
-                "slug": "tips",
-                "description": "Tips Screen",
+                "uid": "a15",
+                "name": "Localization Fix",
+                "slug": "locfix",
+                "description": "Localization Fix screen",
                 "tags": [],
                 "camera": {
                     "keep": true,
@@ -111,10 +132,74 @@
                         "min": -360,
                         "max": 360
                     },
-                    "pitch": {
+                    "roll": {
                         "default": 0,
-                        "min": -90,
-                        "max": 90
+                        "min": 0,
+                        "max": 0
+                    },
+                    "fov": {
+                        "default": 90,
+                        "min": 30,
+                        "max": 120
+                    },
+                    "gaze": {
+                        "delay": 2,
+                        "cursor": {},
+                        "object": {}
+                    }
+                },
+                "hotspots": [],
+                "plugins": {
+                    "instances": [
+                        {
+                            "uid": "simpleimage-a15",
+                            "engine": "org.forgejs.simpleimage",
+                            "keep": false,
+                            "events": {},
+                            "options": {
+                                "url": "assets/a20_photo.jpg",
+                                "alpha": 1,
+                                "maximized": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": 0,
+                                "height": 0,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "delayedactions-a15-next",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "action-next",
+                                        "delay": 1
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "playlists": {}
+            },
+            {
+                "uid": "a20",
+                "name": "Welcome",
+                "slug": "welcome",
+                "description": "Welcome Screen",
+                "tags": [],
+                "camera": {
+                    "keep": true,
+                    "yaw": {
+                        "default": 0,
+                        "min": -360,
+                        "max": 360
                     },
                     "roll": {
                         "default": 0,
@@ -141,7 +226,7 @@
                             "keep": false,
                             "events": {},
                             "options": {
-                                "url": "assets/bg_water.jpg",
+                                "url": "assets/a20_photo.jpg",
                                 "alpha": 1,
                                 "maximized": true,
                                 "horizontalCenter": true,
@@ -155,47 +240,42 @@
                             }
                         },
                         {
-                            "uid": "simpletext-a20-0",
-                            "engine": "org.forgejs.simpletext",
+                            "uid": "simpleimage-a20-1",
+                            "engine": "org.forgejs.simpleimage",
                             "keep": false,
+                            "events": {},
                             "options": {
+                                "url": "assets/headphones.png",
+                                "alpha": 1,
+                                "maximized": false,
                                 "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 25,
+                                "verticalCenter": true,
+                                "width": 10,
+                                "height": 100,
                                 "right": 0,
-                                "left": 0,
-                                "config": {
-                                    "i18n": true,
-                                    "value": "tips1",
-                                    "fontSize": "10vmin",
-                                    "fontFamily": "futura-pt, sans-serif",
-                                    "fontStyle": "normal",
-                                    "fontWeight": 700,
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
+                                "left": 0
                             }
                         },
                         {
-                            "uid": "simpletext-a20-1",
-                            "engine": "org.forgejs.simpletext",
+                            "uid": "simplevideo-a20-voice",
+                            "engine": "org.forgejs.simplevideo",
                             "keep": false,
+                            "data": {
+                                "video": "assets/a20_voice_sv.mp4"
+                            },
                             "options": {
+                                "autoPlay": true,
+                                "loop": false,
+                                "volume": 1,
                                 "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 80,
-                                "right": 100,
-                                "left": 100,
-                                "config": {
-                                    "i18n": true,
-                                    "value": "tips2",
-                                    "fontSize": "5vmin",
-                                    "fontFamily": "futura-pt, sans-serif",
-                                    "fontStyle": "normal",
-                                    "fontWeight": 700,
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
+                                "verticalCenter": true,
+                                "width": "100%",
+                                "height": "100%",
+                                "alpha": 1,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
                             }
                         },
                         {
@@ -215,6 +295,34 @@
                                 "left": 0,
                                 "i18n": true
                             }
+                        },
+                        {
+                            "uid": "delayedactions-a20-hide",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "hide-button-a20",
+                                        "delay": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "uid": "delayedactions-a20-show",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "show-button-a20",
+                                        "delay": 79
+                                    }
+                                ]
+                            }
                         }
                     ]
                 },
@@ -222,9 +330,9 @@
             },
             {
                 "uid": "a30",
-                "name": "Intro Text",
-                "slug": "intro",
-                "description": "Intro text",
+                "name": "Tips Text",
+                "slug": "tips",
+                "description": "Tips text",
                 "tags": [],
                 "camera": {
                     "keep": true,
@@ -232,11 +340,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -261,9 +364,6 @@
                             "uid": "simpleimage-a30",
                             "engine": "org.forgejs.simpleimage",
                             "keep": false,
-                            "events": {
-                                "click": "action-next"
-                            },
                             "options": {
                                 "url": "assets/a30_photo.jpg",
                                 "alpha": 1,
@@ -285,13 +385,13 @@
                             "options": {
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
-                                "top": 25,
-                                "right": 100,
-                                "left": 100,
+                                "top": 10,
+                                "right": 0,
+                                "left": 0,
                                 "config": {
-                                    "i18n": false,
-                                    "value": "VÄLKOMMEN",
-                                    "fontSize": 36,
+                                    "i18n": true,
+                                    "value": "phone1",
+                                    "fontSize": "10vmin",
                                     "fontFamily": "futura-pt, sans-serif",
                                     "fontStyle": "normal",
                                     "fontWeight": 700,
@@ -301,112 +401,23 @@
                             }
                         },
                         {
-                            "uid": "simpletext-a30-2",
+                            "uid": "simpletext-a30-1",
                             "engine": "org.forgejs.simpletext",
                             "keep": false,
                             "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 110,
-                                "right": 100,
-                                "left": 100,
+                                "horizontalCenter": false,
+                                "verticalCenter": true,
+                                "top": 90,
+                                "left": 30,
                                 "config": {
-                                    "i18n": false,
-                                    "value": "Ta dig till startplatsen och gör dig redo",
-                                    "fontSize": 20,
+                                    "i18n": true,
+                                    "value": "phone2",
+                                    "fontSize": "2vmax",
                                     "fontFamily": "futura-pt, sans-serif",
                                     "fontStyle": "normal",
                                     "fontWeight": 700,
                                     "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "simpletext-a30-3",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 150,
-                                "right": 100,
-                                "left": 100,
-                                "config": {
-                                    "i18n": false,
-                                    "value": "1. Ta dig till parken vid Forsebron i Kvarnbyn, Mölndal",
-                                    "fontSize": 20,
-                                    "fontFamily": "futura-pt, sans-serif",
-                                    "fontStyle": "normal",
-                                    "fontWeight": 700,
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "simpletext-a30-4",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 180,
-                                "right": 100,
-                                "left": 100,
-                                "config": {
-                                    "i18n": false,
-                                    "value": "2. Ta på dig hörlurarna",
-                                    "fontSize": 20,
-                                    "fontFamily": "futura-pt, sans-serif",
-                                    "fontStyle": "normal",
-                                    "fontWeight": 700,
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "simpletext-a30-5",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 210,
-                                "right": 100,
-                                "left": 100,
-                                "config": {
-                                    "i18n": false,
-                                    "value": "3. Hitta bänkarna i den lilla parken. Sätt dig på bänken så du ser bron som går över forsen.",
-                                    "fontSize": 20,
-                                    "fontFamily": "futura-pt, sans-serif",
-                                    "fontStyle": "normal",
-                                    "fontWeight": 700,
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "simpletext-a30-6",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 260,
-                                "right": 100,
-                                "left": 100,
-                                "config": {
-                                    "i18n": false,
-                                    "value": "4. Håll telefonen ligga och tryck på start",
-                                    "fontSize": 20,
-                                    "fontFamily": "futura-pt, sans-serif",
-                                    "fontStyle": "normal",
-                                    "fontWeight": 700,
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
+                                    "textAlign": "left"
                                 }
                             }
                         },
@@ -424,7 +435,7 @@
                                 "verticalCenter": false,
                                 "width": 300,
                                 "height": 30,
-                                "bottom": 25
+                                "bottom": 10
                             }
                         }
                     ]
@@ -442,7 +453,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -451,11 +462,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -506,11 +512,12 @@
                                 "url": "assets/here_now.png",
                                 "i18n": true,
                                 "horizontalCenter": true,
+                                "verticalCenter": true,
                                 "width": 300,
-                                "height": 30,
+                                "height": 300,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 50,
+                                "bottom": 0,
                                 "left": 0
                             }
                         },
@@ -537,7 +544,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "show-button-a50",
-                                        "delay": 23
+                                        "delay": 10
                                     }
                                 ]
                             }
@@ -584,16 +591,11 @@
                     }
                 },
                 "camera": {
-                    "keep": true,
+                    "keep": false,
                     "yaw": {
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -601,9 +603,9 @@
                         "max": 0
                     },
                     "fov": {
-                        "default": 90,
+                        "default": 50,
                         "min": 30,
-                        "max": 120
+                        "max": 50
                     },
                     "gaze": {
                         "delay": 2,
@@ -613,20 +615,20 @@
                 },
                 "hotspots": [
                     {
-                        "uid": "hotspot-a60",
-                        "facingCenter": false,
+                        "uid": "hotspot-a60a",
+                        "facingCenter": true,
                         "transform": {
                             "position": {
                                 "theta": -33,
-                                "phi": 50,
+                                "phi": 48,
                                 "radius": 100
                             }
                         },
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 40,
-                                "height": 40
+                                "width": 50,
+                                "height": 50
                             }
                         },
                         "material": {
@@ -641,18 +643,13 @@
                         }
                     },
                     {
-                        "uid": "hotspot-a60-a70",
+                        "uid": "hotspot-a60b",
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 10,
+                                "theta": -10,
                                 "phi": -15,
                                 "radius": 100
-                            },
-                            "rotation": {
-                                "x": 45,
-                                "y": 0,
-                                "z": 0
                             }
                         },
                         "geometry": {
@@ -660,6 +657,39 @@
                             "options": {
                                 "width": 30,
                                 "height": 30
+                            }
+                        },
+                        "material": {
+                            "image": "assets/a60b_trigger.jpg",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "action-loadscene-a60b"
+                            ]
+                        }
+                    },
+                    {
+                        "uid": "hotspot-a60-a70",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": 15,
+                                "phi": -8,
+                                "radius": 100
+                            },
+                            "rotation": {
+                                "x": 65,
+                                "y": 0,
+                                "z": 0
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 25,
+                                "height": 25
                             }
                         },
                         "material": {
@@ -713,7 +743,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -722,11 +752,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -754,6 +779,9 @@
                             "data": {
                                 "video": "assets/a60a_film.mp4"
                             },
+                            "events": {
+                                "onEnded": "action-backtocenter-a60"
+                            },
                             "options": {
                                 "autoPlay": true,
                                 "loop": true,
@@ -770,25 +798,102 @@
                             }
                         },
                         {
-                            "uid": "delayedactions-a60a",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "action-backtocenter-a60",
-                                        "delay": 114
-                                    }
-                                ]
-                            }
-                        },
-                        {
                             "uid": "simplevideo-a60a-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
                             "data": {
                                 "video": "assets/a60a_voice_sv.mp4"
+                            },
+                            "options": {
+                                "autoPlay": true,
+                                "loop": false,
+                                "volume": 1,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": "100%",
+                                "height": "100%",
+                                "alpha": 1,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        }
+                    ]
+                },
+                "playlists": {}
+            },
+            {
+                "uid": "a60b",
+                "name": "Kvarnbyn Intro",
+                "slug": "kvarnbyn",
+                "description": "Intro to Kvarnbyn",
+                "tags": [],
+                "media": {
+                    "uid": "image-a60b",
+                    "type": "image",
+                    "source": {
+                        "format": "equi",
+                        "url": "assets/black_360.jpg"
+                    }
+                },
+                "camera": {
+                    "keep": true,
+                    "yaw": {
+                        "default": 0,
+                        "min": -360,
+                        "max": 360
+                    },
+                    "roll": {
+                        "default": 0,
+                        "min": 0,
+                        "max": 0
+                    },
+                    "fov": {
+                        "default": 90,
+                        "min": 30,
+                        "max": 120
+                    },
+                    "gaze": {
+                        "delay": 2,
+                        "cursor": {},
+                        "object": {}
+                    }
+                },
+                "hotspots": [],
+                "plugins": {
+                    "instances": [
+                        {
+                            "uid": "simplevideo-a60b",
+                            "engine": "org.forgejs.simplevideo",
+                            "keep": false,
+                            "data": {
+                                "video": "assets/a60b_film.mp4"
+                            },
+                            "events": {
+                                "onEnded": "action-backtocenter-a60"
+                            },
+                            "options": {
+                                "autoPlay": true,
+                                "loop": true,
+                                "volume": 1,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": "100%",
+                                "height": "100%",
+                                "alpha": 1,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "simplevideo-a60b-voice",
+                            "engine": "org.forgejs.simplevideo",
+                            "keep": false,
+                            "data": {
+                                "video": "assets/a60b_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -820,7 +925,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -829,11 +934,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -863,7 +963,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-next",
-                                        "delay": 68
+                                        "delay": 60
                                     }
                                 ]
                             }
@@ -924,7 +1024,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -933,11 +1033,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -988,11 +1083,12 @@
                                 "url": "assets/here_now.png",
                                 "i18n": true,
                                 "horizontalCenter": true,
+                                "verticalCenter": true,
                                 "width": 300,
-                                "height": 30,
+                                "height": 300,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 50,
+                                "bottom": 0,
                                 "left": 0
                             }
                         }
@@ -1018,14 +1114,9 @@
                 "camera": {
                     "keep": false,
                     "yaw": {
-                        "default": 90,
+                        "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -1033,9 +1124,9 @@
                         "max": 0
                     },
                     "fov": {
-                        "default": 90,
+                        "default": 50,
                         "min": 30,
-                        "max": 120
+                        "max": 50
                     },
                     "gaze": {
                         "delay": 2,
@@ -1049,8 +1140,8 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 38,
-                                "phi": -15,
+                                "theta": 41,
+                                "phi": -18,
                                 "radius": 100
                             },
                             "rotation": {}
@@ -1058,8 +1149,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 45,
-                                "height": 45
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -1079,7 +1170,7 @@
                         "transform": {
                             "position": {
                                 "theta": -20,
-                                "phi": -55,
+                                "phi": -65,
                                 "radius": 100
                             },
                             "rotation": {
@@ -1091,8 +1182,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 45,
-                                "height": 45
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -1111,16 +1202,16 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": -70,
-                                "phi": 0,
+                                "theta": -92,
+                                "phi": -5,
                                 "radius": 100
                             }
                         },
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 45,
-                                "height": 45
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -1139,8 +1230,8 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 0,
-                                "phi": -10,
+                                "theta": 15,
+                                "phi": -5,
                                 "radius": 100
                             },
                             "rotation": {}
@@ -1148,8 +1239,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 45,
-                                "height": 45
+                                "width": 30,
+                                "height": 30 
                             }
                         },
                         "material": {
@@ -1168,9 +1259,14 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 250,
+                                "theta": 245,
                                 "phi": -20,
                                 "radius": 100
+                            },
+                            "rotation": {
+                                "x": 55,
+                                "y": 0,
+                                "z": 0
                             }
                         },
                         "geometry": {
@@ -1208,7 +1304,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -1217,11 +1313,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -1270,9 +1361,6 @@
                             "data": {
                                 "video": "assets/b10a_voice_sv.mp4"
                             },
-                            "events": {
-                                "onEnded": "action-backtocenter-b10"
-                            },
                             "options": {
                                 "autoPlay": true,
                                 "loop": false,
@@ -1286,6 +1374,20 @@
                                 "right": 0,
                                 "bottom": 0,
                                 "left": 0
+                            }
+                        },
+                        {
+                            "uid": "delayedactions-b10a",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "action-backtocenter-b10",
+                                        "delay": 165
+                                    }
+                                ]
                             }
                         }
                     ]
@@ -1303,7 +1405,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -1312,11 +1414,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -1367,7 +1464,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-backtocenter-b10",
-                                        "delay": 96
+                                        "delay": 80 
                                     }
                                 ]
                             }
@@ -1409,7 +1506,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -1418,11 +1515,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -1444,25 +1536,14 @@
                 "plugins": {
                     "instances": [
                         {
-                            "uid": "delayedactions-b10c",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "action-backtocenter-b10",
-                                        "delay": 110
-                                    }
-                                ]
-                            }
-                        },
-                        {
                             "uid": "simplevideo-b10c",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
                             "data": {
                                 "video": "assets/b10c_film.mp4"
+                            },
+                            "events": {
+                                "onEnded": "action-backtocenter-b10"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -1515,7 +1596,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -1524,11 +1605,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -1556,6 +1632,9 @@
                             "data": {
                                 "video": "assets/b10d_film.mp4"
                             },
+                            "events": {
+                                "onEnded": "action-backtocenter-b10"
+                            },
                             "options": {
                                 "autoPlay": true,
                                 "loop": false,
@@ -1568,20 +1647,6 @@
                                 "right": 0,
                                 "bottom": 0,
                                 "left": 0
-                            }
-                        },
-                        {
-                            "uid": "delayedactions-b10d",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "action-backtocenter-b10",
-                                        "delay": 185
-                                    }
-                                ]
                             }
                         },
                         {
@@ -1621,7 +1686,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -1630,11 +1695,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -1737,7 +1797,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "show-button-b20",
-                                        "delay": 58
+                                        "delay": 45
                                     }
                                 ]
                             }
@@ -1757,7 +1817,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -1766,11 +1826,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -1800,9 +1855,31 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-next",
-                                        "delay": 12
+                                        "delay": 20
                                     }
                                 ]
+                            }
+                        },
+                        {
+                            "uid": "simplevideo-b30-voice",
+                            "engine": "org.forgejs.simplevideo",
+                            "keep": false,
+                            "data": {
+                                "video": "assets/b30_voice_sv.mp4"
+                            },
+                            "options": {
+                                "autoPlay": true,
+                                "loop": false,
+                                "volume": 1,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": "100%",
+                                "height": "100%",
+                                "alpha": 1,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
                             }
                         },
                         {
@@ -1838,7 +1915,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -1847,11 +1924,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -1901,12 +1973,12 @@
                                 "url": "assets/here_now.png",
                                 "i18n": true,
                                 "horizontalCenter": true,
-                                "verticalCenter": false,
+                                "verticalCenter": true,
                                 "width": 300,
-                                "height": 30,
+                                "height": 300,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 50,
+                                "bottom": 0,
                                 "left": 0
                             }
                         }
@@ -1930,16 +2002,11 @@
                     }
                 },
                 "camera": {
-                    "keep": true,
+                    "keep": false,
                     "yaw": {
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -1947,9 +2014,9 @@
                         "max": 0
                     },
                     "fov": {
-                        "default": 90,
+                        "default": 50,
                         "min": 30,
-                        "max": 120
+                        "max": 50
                     },
                     "gaze": {
                         "delay": 2,
@@ -1963,8 +2030,8 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 285,
-                                "phi": 13,
+                                "theta": 283.5,
+                                "phi": 11.5,
                                 "radius": 100
                             }
                         },
@@ -1991,7 +2058,7 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 325,
+                                "theta": 330,
                                 "phi": 13,
                                 "radius": 100
                             }
@@ -1999,8 +2066,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 25,
+                                "height": 25
                             }
                         },
                         "material": {
@@ -2019,16 +2086,16 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 255,
-                                "phi": 0,
+                                "theta": 193,
+                                "phi": -10,
                                 "radius": 100
                             }
                         },
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -2048,15 +2115,15 @@
                         "transform": {
                             "position": {
                                 "theta": 215,
-                                "phi": 30,
+                                "phi": 25,
                                 "radius": 100
                             }
                         },
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -2075,16 +2142,16 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 1,
-                                "phi": 20,
+                                "theta": 150,
+                                "phi": 15,
                                 "radius": 100
                             }
                         },
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 25,
+                                "height": 25
                             }
                         },
                         "material": {
@@ -2103,9 +2170,14 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 30,
-                                "phi": -5,
+                                "theta": 140,
+                                "phi": -25,
                                 "radius": 100
+                            },
+                            "rotation": {
+                                "x": 45,
+                                "y": 0,
+                                "z": 0
                             }
                         },
                         "geometry": {
@@ -2143,7 +2215,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -2152,11 +2224,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -2181,6 +2248,9 @@
                             "uid": "simplevideo-c10a",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
+                            "events": {
+                                "onEnded": "action-backtocenter-c10"
+                            },
                             "data": {
                                 "video": "assets/c10a_film.mp4"
                             },
@@ -2202,9 +2272,6 @@
                             "uid": "simplevideo-c10a-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-backtocenter-c10"
-                            },
                             "data": {
                                 "video": "assets/c10a_voice_sv.mp4"
                             },
@@ -2238,7 +2305,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -2247,11 +2314,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -2333,7 +2395,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -2342,11 +2404,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -2428,7 +2485,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -2437,11 +2494,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -2466,6 +2518,9 @@
                             "uid": "simplevideo-c10d",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
+                            "events": {
+                                "onEnded": "action-backtocenter-c10"
+                            },
                             "data": {
                                 "video": "assets/c10d_film.mp4"
                             },
@@ -2487,9 +2542,6 @@
                             "uid": "simplevideo-c10d-voice",
                             "engine": "org.forgejs.simplevideo",
                             "keep": false,
-                            "events": {
-                                "onEnded": "action-backtocenter-c10"
-                            },
                             "data": {
                                 "video": "assets/c10d_voice_sv.mp4"
                             },
@@ -2523,7 +2575,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -2532,11 +2584,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -2564,6 +2611,9 @@
                             "data": {
                                 "video": "assets/c10e_film.mp4"
                             },
+                            "events": {
+                                "onEnded": "action-backtocenter-c10"
+                            },
                             "options": {
                                 "autoPlay": true,
                                 "loop": true,
@@ -2584,9 +2634,6 @@
                             "keep": false,
                             "data": {
                                 "video": "assets/c10e_voice_sv.mp4"
-                            },
-                            "events": {
-                                "onEnded": "action-backtocenter-c10"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -2618,7 +2665,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -2627,11 +2674,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -2661,7 +2703,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-next",
-                                        "delay": 40
+                                        "delay": 45
                                     }
                                 ]
                             }
@@ -2705,6 +2747,54 @@
                                 "bottom": 0,
                                 "left": 0
                             }
+                        },
+                        {
+                            "uid": "imagebutton-c20",
+                            "engine": "se.ri.imagebutton",
+                            "keep": false,
+                            "events": {
+                                "onClick": "action-next"
+                            },
+                            "options": {
+                                "url": "assets/next.png",
+                                "i18n": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": false,
+                                "width": 300,
+                                "height": 30,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 50,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "delayedactions-c20-hide",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "hide-button-c20",
+                                        "delay": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "uid": "delayedactions-c20-show",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "show-button-c20",
+                                        "delay": 45
+                                    }
+                                ]
+                            }
                         }
                     ]
                 },
@@ -2721,7 +2811,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -2730,11 +2820,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -2784,12 +2869,12 @@
                                 "url": "assets/here_now.png",
                                 "i18n": true,
                                 "horizontalCenter": true,
-                                "verticalCenter": false,
+                                "verticalCenter": true,
                                 "width": 300,
-                                "height": 30,
+                                "height": 300,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 50,
+                                "bottom": 0,
                                 "left": 0
                             }
                         }
@@ -2813,16 +2898,11 @@
                     }
                 },
                 "camera": {
-                    "keep": true,
+                    "keep": false,
                     "yaw": {
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -2830,9 +2910,9 @@
                         "max": 0
                     },
                     "fov": {
-                        "default": 70,
-                        "min": 50,
-                        "max": 120
+                        "default": 50,
+                        "min": 30,
+                        "max": 50
                     },
                     "gaze": {
                         "delay": 2,
@@ -2854,8 +2934,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 40,
-                                "height": 40
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -2874,16 +2954,16 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 30,
-                                "phi": 0,
+                                "theta": 81,
+                                "phi": 8,
                                 "radius": 100
                             }
                         },
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 40,
-                                "height": 40
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -2902,21 +2982,16 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 0,
+                                "theta": 25,
                                 "phi": 0,
                                 "radius": 100
-                            },
-                            "rotation": {
-                                "x": 0,
-                                "y": 0,
-                                "z": 0
                             }
                         },
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 40,
-                                "height": 40
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -2938,18 +3013,13 @@
                                 "theta": 40,
                                 "phi": -30,
                                 "radius": 100
-                            },
-                            "rotation": {
-                                "x": 0,
-                                "y": 0,
-                                "z": 0
                             }
                         },
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 40,
-                                "height": 40
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -2965,12 +3035,17 @@
                     },
                     {
                         "uid": "hotspot-d10-d20",
-                        "facingCenter": true,
+                        "facingCenter": false,
                         "transform": {
                             "position": {
                                 "theta": -85,
-                                "phi": -20,
+                                "phi": -35,
                                 "radius": 100
+                            },
+                            "rotation": {
+                                "x": 75,
+                                "y": 85,
+                                "z": 0
                             }
                         },
                         "geometry": {
@@ -3008,7 +3083,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -3017,11 +3092,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -3049,6 +3119,9 @@
                             "data": {
                                 "video": "assets/d10a_film.mp4"
                             },
+                            "events": {
+                                "onEnded": "action-backtocenter-d10"
+                            },
                             "options": {
                                 "autoPlay": true,
                                 "loop": false,
@@ -3061,20 +3134,6 @@
                                 "right": 0,
                                 "bottom": 0,
                                 "left": 0
-                            }
-                        },
-                        {
-                            "uid": "delayedactions-d10a",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "action-backtocenter-d10",
-                                        "delay": 172
-                                    }
-                                ]
                             }
                         },
                         {
@@ -3114,7 +3173,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -3123,11 +3182,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -3209,7 +3263,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -3218,11 +3272,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -3250,6 +3299,9 @@
                             "data": {
                                 "video": "assets/d10c_film.mp4"
                             },
+                            "events": {
+                                "onEnded": "action-backtocenter-d10"
+                            },
                             "options": {
                                 "autoPlay": true,
                                 "loop": true,
@@ -3271,9 +3323,6 @@
                             "keep": false,
                             "data": {
                                 "video": "assets/d10c_voice_sv.mp4"
-                            },
-                            "events": {
-                                "onEnded": "action-backtocenter-d10"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -3297,7 +3346,7 @@
             {
                 "uid": "d10d",
                 "name": "Ljudkonstverk",
-                "slug": "ljudkonstverk",
+                "slug": "water",
                 "description": "",
                 "tags": [],
                 "media": {
@@ -3305,7 +3354,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -3314,11 +3363,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -3347,7 +3391,7 @@
                                 "onEnded": "action-backtocenter-d10"
                             },
                             "data": {
-                                "video": "assets/d10d_voice_sv.mp4"
+                                "video": "assets/d10d_waters.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -3381,6 +3425,37 @@
                                 "bottom": 0,
                                 "left": 0
                             }
+                        },
+                        {
+                            "uid": "simpleimage-d10d-1",
+                            "engine": "org.forgejs.simpleimage",
+                            "keep": false,
+                            "events": {},
+                            "options": {
+                                "url": "assets/headphones.png",
+                                "alpha": 1,
+                                "maximized": false,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": 100,
+                                "height": 100,
+                                "right": 0,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "delayedactions-d10d",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "action-backtocenter-d10",
+                                        "delay": 116
+                                    }
+                                ]
+                            }
                         }
                     ]
                 },
@@ -3397,7 +3472,7 @@
                     "type": "image",
                     "source": {
                         "format": "equi",
-                        "url": "assets/grey_360.jpg"
+                        "url": "assets/black_360.jpg"
                     }
                 },
                 "camera": {
@@ -3406,11 +3481,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -3431,6 +3501,41 @@
                 "hotspots": [],
                 "plugins": {
                     "instances": [
+                        {
+                            "uid": "simpleimage-d20",
+                            "engine": "org.forgejs.simpleimage",
+                            "keep": false,
+                            "events": {},
+                            "options": {
+                                "url": "assets/bg_water.jpg",
+                                "alpha": 1,
+                                "maximized": true,
+                                "horizontalCenter": true,
+                                "width": 0,
+                                "height": 0,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "simpleimage-d20-1",
+                            "engine": "org.forgejs.simpleimage",
+                            "keep": false,
+                            "events": {},
+                            "options": {
+                                "url": "assets/headphones.png",
+                                "alpha": 1,
+                                "maximized": false,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": 100,
+                                "height": 100,
+                                "right": 0,
+                                "left": 0
+                            }
+                        },
                         {
                             "uid": "simplevideo-d20-voice",
                             "engine": "org.forgejs.simplevideo",
@@ -3454,17 +3559,6 @@
                             }
                         },
                         {
-                            "uid": "arview-d20",
-                            "engine": "se.ri.arview",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "facing": "front",
-                                "delay": 0,
-                                "markers": []
-                            }
-                        },
-                        {
                             "uid": "imagebutton-d20",
                             "engine": "se.ri.imagebutton",
                             "keep": false,
@@ -3485,28 +3579,28 @@
                             }
                         },
                         {
-                            "uid": "delayedactions-b20-hide",
+                            "uid": "delayedactions-d20-hide",
                             "engine": "se.ri.delayedactions",
                             "enabled": true,
                             "keep": false,
                             "options": {
                                 "actions": [
                                     {
-                                        "actionUID": "hide-button-b20",
+                                        "actionUID": "hide-button-d20",
                                         "delay": 0
                                     }
                                 ]
                             }
                         },
                         {
-                            "uid": "delayedactions-b20-show",
+                            "uid": "delayedactions-d20-show",
                             "engine": "se.ri.delayedactions",
                             "enabled": true,
                             "keep": false,
                             "options": {
                                 "actions": [
                                     {
-                                        "actionUID": "show-button-b20",
+                                        "actionUID": "show-button-d20",
                                         "delay": 40
                                     }
                                 ]
@@ -3528,11 +3622,6 @@
                         "default": 0,
                         "min": -360,
                         "max": 360
-                    },
-                    "pitch": {
-                        "default": 0,
-                        "min": -90,
-                        "max": 90
                     },
                     "roll": {
                         "default": 0,
@@ -3578,14 +3667,14 @@
                             "keep": false,
                             "options": {
                                 "horizontalCenter": true,
-                                "verticalCenter": false,
+                                "verticalCenter": true,
                                 "top": 20,
                                 "right": 100,
                                 "left": 100,
                                 "config": {
                                     "i18n": true,
-                                    "value": "outrofull",
-                                    "fontSize": "5vmin",
+                                    "value": "outro1",
+                                    "fontSize": "2.5vmax",
                                     "fontFamily": "futura-pt, sans-serif",
                                     "fontStyle": "normal",
                                     "fontWeight": 700,
@@ -3595,7 +3684,7 @@
                             }
                         },
                         {
-                            "uid": "imagebutton-d30",
+                            "uid": "imagebutton-d30-1",
                             "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
@@ -3605,34 +3694,30 @@
                                 "url": "assets/show_map.png",
                                 "i18n": true,
                                 "horizontalCenter": true,
-                                "verticalCenter": false,
+                                "verticalCenter": true,
                                 "width": 300,
                                 "height": 30,
-                                "top": 170,
                                 "right": 0,
                                 "left": 0
                             }
                         },
                         {
-                            "uid": "simpletext-d30-1",
-                            "engine": "org.forgejs.simpletext",
+                            "uid": "imagebutton-d30-2",
+                            "engine": "se.ri.imagebutton",
                             "keep": false,
+                            "events": {
+                                "onClick": "action-back-to-start"
+                            },
                             "options": {
+                                "url": "assets/back_to_start.png",
+                                "i18n": true,
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
-                                "top": 230,
+                                "width": 300,
+                                "height": 30,
+                                "bottom": 10,
                                 "right": 0,
-                                "left": 0,
-                                "config": {
-                                    "i18n": true,
-                                    "value": "outro4",
-                                    "fontSize": "5vmin",
-                                    "fontFamily": "futura-pt, sans-serif",
-                                    "fontStyle": "normal",
-                                    "fontWeight": 700,
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
+                                "left": 0
                             }
                         }
                     ]
@@ -3643,7 +3728,7 @@
     },
     "camera": {
         "fov": {
-            "default": 90,
+            "default": 50,
             "min": 30,
             "max": 90
         }
@@ -3772,6 +3857,16 @@
                     90,
                     45,
                     ""
+                ]
+            }
+        },
+        {
+            "uid": "action-loadscene-a60b",
+            "target": "viewer.story",
+            "method": {
+                "name": "loadScene",
+                "args": [
+                    "a60b"
                 ]
             }
         },
@@ -4034,13 +4129,43 @@
             }
         },
         {
+            "uid": "action-back-to-start",
+            "target": "viewer.story",
+            "method": {
+                "name": "loadScene",
+                "args": [
+                    "a10"
+                ]
+            }
+        },
+        {
             "uid": "action-goto-map",
             "target": "window.location",
             "method": {
                 "name": "assign",
                 "args": [
-                    "https://www.google.com/maps?oe=utf-8&client=firefox-b-ab&q=m%C3%B6lndal+city+museum&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiL8Kbp38nbAhXHOSwKHYGpCLgQ_AUICygC"
+                    "https://www.google.se/maps/place/M%C3%B6lndals+stadsmuseum/@57.6578068,12.0319405,15z/data=!4m5!3m4!1s0x0:0x6a8f19e6d4e0cdeb!8m2!3d57.6578068!4d12.0319405"
                 ]
+            }
+        },
+        {
+            "uid": "hide-button-a20",
+            "target": {
+                "identifier": "imagebutton-a20",
+                "accessor": "actions"
+            },
+            "method": {
+                "name": "hide"
+            }
+        },
+        {
+            "uid": "show-button-a20",
+            "target": {
+                "identifier": "imagebutton-a20",
+                "accessor": "actions"
+            },
+            "method": {
+                "name": "show"
             }
         },
         {
@@ -4104,9 +4229,9 @@
             }
         },
         {
-            "uid": "hide-button-c10",
+            "uid": "hide-button-c20",
             "target": {
-                "identifier": "imagebutton-c10",
+                "identifier": "imagebutton-c20",
                 "accessor": "actions"
             },
             "method": {
@@ -4114,9 +4239,9 @@
             }
         },
         {
-            "uid": "show-button-c10",
+            "uid": "show-button-c20",
             "target": {
-                "identifier": "imagebutton-c10",
+                "identifier": "imagebutton-c20",
                 "accessor": "actions"
             },
             "method": {

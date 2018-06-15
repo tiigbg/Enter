@@ -27,6 +27,7 @@ ForgePlugins.OrientationKeeper.prototype =
      * Boot function
      */
     boot: function () {
+      console.log("Booting!")
       this._camera = this.viewer.camera;
       this.viewer.story.onSceneLoadStart.add(this.sceneLoadHandler, this); 
       if (FORGE.Device.gyroscope === false) {
@@ -60,6 +61,7 @@ ForgePlugins.OrientationKeeper.prototype =
      * Destroy function
      */
     destroy: function () {
+      console.log("Destroy!");
       if (FORGE.Device.gyroscope === false) {
         return;
       }
@@ -83,6 +85,7 @@ ForgePlugins.OrientationKeeper.prototype =
       if (typeof event !== "undefined" && event !== null && typeof event.data !== "undefined" && event.data !== null) {
         position = /** @type {DeviceOrientation} */ event.data;
       }
+      //console.log("Pos is", position, this._sceneAdjustmentQuat);
 
       this._posEuler.set(FORGE.Math.degToRad(position.beta), FORGE.Math.degToRad(position.alpha), -FORGE.Math.degToRad(position.gamma), "YXZ");
 
@@ -123,34 +126,45 @@ ForgePlugins.OrientationKeeper.prototype =
     },
 
     sceneLoadHandler: function () {
-      if (this.viewer.story.scene.config.hotspots.length > 0) {
-        var curUID = this.viewer.story.scene.config.uid;
-        if (curUID !== this._last360SceneUID) {
-          // A new 360 scene, adjusting
-          this._last360SceneUID = this.viewer.story.scene.config.uid;
-        } else {
-          // Same 360 scene as before, don't adjust
-          return;
-        }
-      }
-      this._sceneAdjustmentYaw = 0;
-      window.yawOffset = 0;
-      this._sceneAdjustmentQuat = null;
-      if (this.viewer.story.scene.config.startingYaw === undefined) {
-        console.log("no target yaw");
-        return;
-      }
-      this._currentTargetYaw = this.viewer.story.scene.config.startingYaw;
-      console.log("target yaw is", this._currentTargetYaw);
-      setTimeout(this.changeSceneOrientation.bind(this), 150);
-    },
-
-    changeSceneOrientation: function() {
+      console.log("Complete 2!");
       console.log("Disabling gyro");
       if (this._gyroscope) {
         this._gyroscope.enabled = false;
       }
-      var currentYaw = this._camera.yaw;
+      if (this.viewer.story.scene.config.hotspots.length > 0) {
+        var curUID = this.viewer.story.scene.config.uid;
+        if (curUID !== this._last360SceneUID) {
+          console.log(" A new 360 scene, adjusting");
+          this._last360SceneUID = this.viewer.story.scene.config.uid;
+        } else {
+          console.log(" Same 360 scene as before, don't adjust");
+          return;
+        }
+      } else {
+        return;
+      }
+      this._sceneAdjustmentYaw = 0;
+      window.yawOffset = 0;
+      console.log("Got here");
+      this._sceneAdjustmentQuat = null;
+      if (this.viewer.story.scene.config.startingYaw === undefined) {
+        console.log("no target yaw");
+        return;
+      } 
+      this._currentTargetYaw = this.viewer.story.scene.config.startingYaw;
+      console.log("target yaw is", this._currentTargetYaw);
+      setTimeout(this.changeSceneOrientation.bind(this), 500);
+    },
+
+    changeSceneOrientation: function() {
+      var currentYaw
+      if (this._sceneAdjustmentQuat && this._sceneAdjustmentQuat !== null) {
+        console.log("Had old adjustmenet");
+        currentYaw = this._camera.yaw-this._sceneAdjustmentYaw;
+      } else {
+        console.log("No old adjustment");
+        currentYaw = this._camera.yaw;
+      }
       console.log("yaw at start of scene is", currentYaw);
       this._sceneAdjustmentYaw = this._currentTargetYaw-currentYaw+360;
       window.yawOffset = this._currentTargetYaw-currentYaw + 360;
