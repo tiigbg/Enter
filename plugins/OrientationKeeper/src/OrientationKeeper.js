@@ -27,9 +27,9 @@ ForgePlugins.OrientationKeeper.prototype =
      * Boot function
      */
     boot: function () {
-      console.log("Booting!")
+      console.log("Booting 2!")
       this._camera = this.viewer.camera;
-      this.viewer.story.onSceneLoadStart.add(this.sceneLoadHandler, this); 
+      this.viewer.story.onSceneLoadComplete.add(this.sceneLoadHandler, this); 
       if (FORGE.Device.gyroscope === false) {
         return;
       }
@@ -65,7 +65,7 @@ ForgePlugins.OrientationKeeper.prototype =
       if (FORGE.Device.gyroscope === false) {
         return;
       }
-      this.viewer.story.onSceneLoadStart.remove(this.sceneLoadHandler, this);
+      this.viewer.story.onSceneLoadComplete.remove(this.sceneLoadHandler, this);
       this.viewer.gyroscope.onDeviceOrientationChange.remove(this.gyroHandler, this);
       this.viewer.gyroscope.onScreenOrientationChange.remove(this.orientationChangeHandler, this);
     },
@@ -126,7 +126,7 @@ ForgePlugins.OrientationKeeper.prototype =
     },
 
     sceneLoadHandler: function () {
-      console.log("Complete 2!");
+      console.log("Complete 6!");
       console.log("Disabling gyro");
       if (this._gyroscope) {
         this._gyroscope.enabled = false;
@@ -153,7 +153,7 @@ ForgePlugins.OrientationKeeper.prototype =
       } 
       this._currentTargetYaw = this.viewer.story.scene.config.startingYaw;
       console.log("target yaw is", this._currentTargetYaw);
-      setTimeout(this.changeSceneOrientation.bind(this), 500);
+      setTimeout(this.changeSceneOrientation.bind(this), 300);
     },
 
     changeSceneOrientation: function() {
@@ -170,12 +170,24 @@ ForgePlugins.OrientationKeeper.prototype =
       window.yawOffset = this._currentTargetYaw-currentYaw + 360;
       this._sceneAdjustmentQuat = new THREE.Quaternion();
       this._sceneAdjustmentQuat.setFromAxisAngle( new THREE.Vector3( 0, 1, 0 ), FORGE.Math.degToRad(-this._sceneAdjustmentYaw));
-      console.log("We are adjusting by", this._currentTargetYaw-currentYaw);
-      setTimeout(this.printNewYaw.bind(this), 1000);
+      console.log("We are adjusting by", this._currentTargetYaw-currentYaw, this._sceneAdjustmentQuat);
+      setTimeout(this.checkYaw.bind(this), 500);
     },
 
-    printNewYaw: function() {
-      console.log("new yaw is now", this._camera.yaw);
+    checkYaw: function() {
+      console.log("new yaw is now", this._camera.yaw, this._sceneAdjustmentQuat);
+      var diff = this._currentTargetYaw - this._camera.yaw;
+      diff = this.corrMod(diff + 180, 360) - 180
+      console.log("Diff is", diff);
+      if (Math.abs(diff) > 3) {
+        //this._sceneAdjustmentQuat = null;
+        this.changeSceneOrientation();
+      }
+
     },
+
+    corrMod: function(a, n) {
+      return a - Math.floor(a/n) * n;
+    }
 
   };

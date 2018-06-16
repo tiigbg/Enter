@@ -1,9 +1,11 @@
 {
     "phone1": "Gör din mobil redo",
-    "phone2": "1. Sätt ljusstyrkan ☼ på max eller auto.<br />2. Sätt webbläsaren i fullskärms-läge:<br />&nbsp;&nbsp;&nbsp;iPhone: Om du ser flikar och adressfält längst upp: Gå till inställningar ➔ Safari, och stäng av “Visa flikfältet”.<br />&nbsp;&nbsp;&nbsp;Android: Dubbeltryck på skärmen för fullskärm.<br />3. Håll din mobilskärm liggande.Om bilden inte följer med, kontrollera att stående riktningslås är av. ↺<br />4. Justera ljudvolymen så du hör bra.",
+    "phone2": "1. Stäng av Wi-Fi helt.<br />2. Sätt ljusstyrkan ☼ på max eller auto.<br />3. För att undvika att skärmen slocknar, sätt autolås på 3 minuter eller mer.<br />4. Justera ljudvolymen så du hör bra.",
+    "phone3": "5. Håll din mobilskärm liggande. Om bilden inte följer med, kontrollera att stående riktningslås är av. ↺<br />6. Sätt webbläsaren i fullskärms-läge:<br />&nbsp;&nbsp;&nbsp;iPhone: Om du ser flikar och adressfält ovanför och nedanför: Tryck på symbolen med pil i mitten nedan (Dela) och välj “Lägg till på hemskärmen”. Fortsätt sedan från den nya ikonen.<br />&nbsp;&nbsp;&nbsp;Android: Dubbeltryck på skärmen för fullskärm.",
     "outro1": "Nu är turen i Kvarnbyn slut.<br />Om du har lånat utrustning, vänligen lämna tillbaka den nu.<br />Vill du veta mer om Kvarnbyn, välkommen till Mölndals stadsmuseum.<br /><br /><br /><br />Vill du upptäcka fler platser i Mölndal? Fortsätt på www.entermolndal.se<br /><br /><br />",
     "assets/a20_photo.jpg": "assets/a20_photo_sv.jpg",
     "assets/next.png": "assets/next_sv.png",
+    "assets/next_small.png": "assets/next_small_sv.png",
     "assets/here_now.png": "assets/here_now_sv.png",
     "assets/show_map.png": "assets/show_map_sv.png",
     "assets/thank_you.png": "assets/thank_you_sv.png",

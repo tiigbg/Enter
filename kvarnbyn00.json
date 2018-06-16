@@ -1,9 +1,9 @@
 {
     "story": {
-        "uid": "proto60",
-        "name": "proto60",
-        "slug": "proto60",
-        "description": "ENTER Mölndal Andra Prototypen",
+        "uid": "kvarnbyn11",
+        "name": "kvarnbyn11",
+        "slug": "kvarnbyn",
+        "description": "ENTER Mölndal - Kvarnbyn",
         "scenes": [
             {
                 "uid": "a10",
@@ -286,7 +286,7 @@
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "url": "assets/next.png",
+                                "url": "assets/next_small.png",
                                 "horizontalCenter": true,
                                 "width": 300,
                                 "height": 30,
@@ -319,7 +319,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "show-button-a20",
-                                        "delay": 79
+                                        "delay": 1
                                     }
                                 ]
                             }
@@ -423,6 +423,98 @@
                         },
                         {
                             "uid": "imagebutton-a30",
+                            "engine": "se.ri.imagebutton",
+                            "keep": false,
+                            "events": {
+                                "onClick": "action-next"
+                            },
+                            "options": {
+                                "url": "assets/next_small.png",
+                                "i18n": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": false,
+                                "width": 300,
+                                "height": 30,
+                                "bottom": 10
+                            }
+                        }
+                    ]
+                },
+                "playlists": {}
+            },
+            {
+                "uid": "a40",
+                "name": "Tips Text 2",
+                "slug": "tips2",
+                "description": "Tips text 2",
+                "tags": [],
+                "camera": {
+                    "keep": true,
+                    "yaw": {
+                        "default": 0,
+                        "min": -360,
+                        "max": 360
+                    },
+                    "roll": {
+                        "default": 0,
+                        "min": 0,
+                        "max": 0
+                    },
+                    "fov": {
+                        "default": 90,
+                        "min": 30,
+                        "max": 120
+                    },
+                    "gaze": {
+                        "delay": 2,
+                        "cursor": {},
+                        "object": {}
+                    }
+                },
+                "hotspots": [],
+                "plugins": {
+                    "instances": [
+                        {
+                            "uid": "simpleimage-a40",
+                            "engine": "org.forgejs.simpleimage",
+                            "keep": false,
+                            "options": {
+                                "url": "assets/a30_photo.jpg",
+                                "alpha": 1,
+                                "maximized": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": 0,
+                                "height": 0,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "simpletext-a40-0",
+                            "engine": "org.forgejs.simpletext",
+                            "keep": false,
+                            "options": {
+                                "horizontalCenter": false,
+                                "verticalCenter": true,
+                                "top": 90,
+                                "left": 30,
+                                "config": {
+                                    "i18n": true,
+                                    "value": "phone3",
+                                    "fontSize": "3vmax",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
+                                    "color": "#f7f6f2",
+                                    "textAlign": "left"
+                                }
+                            }
+                        },
+                        {
+                            "uid": "imagebutton-a40",
                             "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
@@ -544,7 +636,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "show-button-a50",
-                                        "delay": 10
+                                        "delay": 1
                                     }
                                 ]
                             }
@@ -955,20 +1047,6 @@
                 "plugins": {
                     "instances": [
                         {
-                            "uid": "delayedactions-a70",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "action-next",
-                                        "delay": 60
-                                    }
-                                ]
-                            }
-                        },
-                        {
                             "uid": "simpleimage-a70",
                             "engine": "org.forgejs.simpleimage",
                             "keep": false,
@@ -1007,6 +1085,54 @@
                                 "right": 0,
                                 "bottom": 0,
                                 "left": 0
+                            }
+                        },
+                        {
+                            "uid": "imagebutton-a70",
+                            "engine": "se.ri.imagebutton",
+                            "keep": false,
+                            "events": {
+                                "onClick": "action-next"
+                            },
+                            "options": {
+                                "url": "assets/next.png",
+                                "i18n": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": 300,
+                                "height": 300,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "delayedactions-a70-hide",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "hide-button-a70",
+                                        "delay": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "uid": "delayedactions-a70-show",
+                            "engine": "se.ri.delayedactions",
+                            "enabled": true,
+                            "keep": false,
+                            "options": {
+                                "actions": [
+                                    {
+                                        "actionUID": "show-button-a70",
+                                        "delay": 1
+                                    }
+                                ]
                             }
                         }
                     ]
@@ -1766,11 +1892,12 @@
                                 "url": "assets/next.png",
                                 "i18n": true,
                                 "horizontalCenter": true,
+                                "verticalCenter": true,
                                 "width": 300,
-                                "height": 30,
+                                "height": 300,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 50,
+                                "bottom": 0,
                                 "left": 0
                             }
                         },
@@ -1797,7 +1924,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "show-button-b20",
-                                        "delay": 45
+                                        "delay": 1
                                     }
                                 ]
                             }
@@ -1847,20 +1974,6 @@
                 "plugins": {
                     "instances": [
                         {
-                            "uid": "delayedactions-b30",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "action-next",
-                                        "delay": 20
-                                    }
-                                ]
-                            }
-                        },
-                        {
                             "uid": "simpleimage-b30",
                             "engine": "org.forgejs.simpleimage",
                             "keep": false,
@@ -1872,6 +1985,26 @@
                                 "verticalCenter": true,
                                 "width": 0,
                                 "height": 0,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "imagebutton-b30",
+                            "engine": "se.ri.imagebutton",
+                            "keep": false,
+                            "events": {
+                                "onClick": "action-next"
+                            },
+                            "options": {
+                                "url": "assets/next.png",
+                                "i18n": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": 300,
+                                "height": 300,
                                 "top": 0,
                                 "right": 0,
                                 "bottom": 0,
@@ -2695,20 +2828,6 @@
                 "plugins": {
                     "instances": [
                         {
-                            "uid": "delayedactions-c20",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "action-next",
-                                        "delay": 45
-                                    }
-                                ]
-                            }
-                        },
-                        {
                             "uid": "simpleimage-c20",
                             "engine": "org.forgejs.simpleimage",
                             "keep": false,
@@ -2759,12 +2878,12 @@
                                 "url": "assets/next.png",
                                 "i18n": true,
                                 "horizontalCenter": true,
-                                "verticalCenter": false,
+                                "verticalCenter": true,
                                 "width": 300,
-                                "height": 30,
+                                "height": 300,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 50,
+                                "bottom": 0,
                                 "left": 0
                             }
                         },
@@ -2791,7 +2910,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "show-button-c20",
-                                        "delay": 45
+                                        "delay": 1
                                     }
                                 ]
                             }
@@ -3452,7 +3571,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "action-backtocenter-d10",
-                                        "delay": 116
+                                        "delay": 120
                                     }
                                 ]
                             }
@@ -3601,7 +3720,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "show-button-d20",
-                                        "delay": 40
+                                        "delay": 1
                                     }
                                 ]
                             }
@@ -4182,6 +4301,26 @@
             "uid": "show-button-a50",
             "target": {
                 "identifier": "imagebutton-a50",
+                "accessor": "actions"
+            },
+            "method": {
+                "name": "show"
+            }
+        },
+        {
+            "uid": "hide-button-a70",
+            "target": {
+                "identifier": "imagebutton-a70",
+                "accessor": "actions"
+            },
+            "method": {
+                "name": "hide"
+            }
+        },
+        {
+            "uid": "show-button-a70",
+            "target": {
+                "identifier": "imagebutton-a70",
                 "accessor": "actions"
             },
             "method": {
