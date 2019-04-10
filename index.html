@@ -1,14 +1,38 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
 
-<head>
-  <title>ENTER Mölndal</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no"
-  />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta property="og:image" content="assets/enter-promo.jpg">
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+
+
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://use.typekit.net/nqd3uyv.css">
   <!-- Uncomment to include the polyfill for webvr, does not yet seem to work reliably tho. Not needed for "magic window" style AR -->
@@ -23,6 +47,8 @@
   <div class="speaker"></div>
 
   <div id="container"></div>
+
+  <script type="text/javascript" src="cordova.js"></script>
 
   <!-- Include the threejs custom build -->
   <script src="lib/three.js/three.custom.min.js"></script>
@@ -51,11 +77,14 @@
 
   <script language="javascript" type="text/javascript">
 
+
     var viewer;
     var story;
     var editor = getParameterByName('editor');
 
+    console.log("Time to load JSON");
     loadJSON('kvarnbyn11.json', function (response) {
+      console.log("yo response is", response);
       // Parse JSON string into object
       story = JSON.parse(response);
 
@@ -64,6 +93,7 @@
 
       // Creation of the FORGE.Viewer
       viewer = new FORGE.Viewer("container", story);
+      console.log("Forge viewer should now be ready", viewer);
 
       function onEndedHandler() {
         viewer.story.nextScene();
@@ -87,6 +117,7 @@
       viewer.onReady.addOnce(onReadyHandler);
 
     });
+    console.log("JSON has been loaded??");
 
     //Transition function called by Forge when a hotspot is clicked
     //@uid string is the target scene uid
@@ -119,6 +150,8 @@
       // viewer.story.loadScene('scene-1');
     };
   </script>
-</body>
 
+
+
+    </body>
 </html>
