@@ -4506,6 +4506,46 @@
             "method": {
                 "name": "show"
             }
+        },
+        {
+            "uid": "shortcut-bench",
+            "target": "viewer.story",
+            "method": {
+                "name": "loadScene",
+                "args": [
+                    "a50"
+                ]
+            }
+        },
+        {
+            "uid": "shortcut-bridge-1",
+            "target": "viewer.story",
+            "method": {
+                "name": "loadScene",
+                "args": [
+                    "a80"
+                ]
+            }
+        },
+        {
+            "uid": "shortcut-square",
+            "target": "viewer.story",
+            "method": {
+                "name": "loadScene",
+                "args": [
+                    "b40"
+                ]
+            }
+        },
+        {
+            "uid": "shortcut-bridge-2",
+            "target": "viewer.story",
+            "method": {
+                "name": "loadScene",
+                "args": [
+                    "c30"
+                ]
+            }
         }
     ]
 }
