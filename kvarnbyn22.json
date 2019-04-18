@@ -35,13 +35,34 @@
                             }
                         },
                         {
-                            "uid": "simpletext-a10-0",
+                            "uid": "simpletext-a10-10",
                             "engine": "org.forgejs.simpletext",
                             "keep": false,
                             "options": {
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
                                 "top": 10,
+                                "right": 0,
+                                "left": 0,
+                                "config": {
+                                    "value": "Mölndals stadsmuseum presenterar",
+                                    "fontSize": "5vmin",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
+                                    "color": "#f7f6f2",
+                                    "textAlign": "center"
+                                }
+                            }
+                        },
+                        {
+                            "uid": "simpletext-a10-0",
+                            "engine": "org.forgejs.simpletext",
+                            "keep": false,
+                            "options": {
+                                "horizontalCenter": true,
+                                "verticalCenter": false,
+                                "top": 40,
                                 "right": 0,
                                 "left": 0,
                                 "config": {
@@ -90,7 +111,7 @@
                                 "height": 30,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 90,
+                                "bottom": 80,
                                 "left": 0
                             }
                         },
@@ -111,7 +132,7 @@
                                 "height": 30,
                                 "top": 0,
                                 "right": 0,
-                                "bottom": 40,
+                                "bottom": 30,
                                 "left": 0
                             }
                         }
@@ -294,34 +315,6 @@
                                 "bottom": 25,
                                 "left": 0,
                                 "i18n": true
-                            }
-                        },
-                        {
-                            "uid": "delayedactions-a20-hide",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "hide-button-a20",
-                                        "delay": 0
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "uid": "delayedactions-a20-show",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "show-button-a20",
-                                        "delay": 0
-                                    }
-                                ]
                             }
                         }
                     ]
@@ -522,7 +515,7 @@
                                 "onClick": "action-next"
                             },
                             "options": {
-                                "url": "assets/enter.png",
+                                "url": "assets/start.png",
                                 "i18n": false,
                                 "horizontalCenter": true,
                                 "verticalCenter": false,
@@ -612,34 +605,6 @@
                                 "right": 0,
                                 "bottom": 0,
                                 "left": 0
-                            }
-                        },
-                        {
-                            "uid": "delayedactions-a50-hide",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "hide-button-a50",
-                                        "delay": 0
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "uid": "delayedactions-a50-show",
-                            "engine": "se.ri.delayedactions",
-                            "enabled": true,
-                            "keep": false,
-                            "options": {
-                                "actions": [
-                                    {
-                                        "actionUID": "show-button-a50",
-                                        "delay": 0
-                                    }
-                                ]
                             }
                         },
                         {
@@ -736,34 +701,6 @@
                         }
                     },
                     {
-                        "uid": "hotspot-a60b",
-                        "facingCenter": true,
-                        "transform": {
-                            "position": {
-                                "theta": -10,
-                                "phi": -15,
-                                "radius": 100
-                            }
-                        },
-                        "geometry": {
-                            "type": "plane",
-                            "options": {
-                                "width": 30,
-                                "height": 30
-                            }
-                        },
-                        "material": {
-                            "image": "assets/a60b_trigger.jpg",
-                            "opacity": 1,
-                            "mediaType": "image"
-                        },
-                        "events": {
-                            "onClick": [
-                                "action-loadscene-a60b"
-                            ]
-                        }
-                    },
-                    {
                         "uid": "hotspot-a60-a70",
                         "facingCenter": true,
                         "transform": {
@@ -795,14 +732,14 @@
                                 "action-to-loco-a70"
                             ]
                         }
-                                            },
+                    },
                     {
                         "uid": "hotspot-shortcut-bridge-1",
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 30,
-                                "phi": -70,
+                                "theta": 60,
+                                "phi": -73,
                                 "radius": 100
                             },
                             "rotation": {
@@ -814,8 +751,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 20,
-                                "height": 20
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -835,7 +772,7 @@
                         "transform": {
                             "position": {
                                 "theta": 5,
-                                "phi": -70,
+                                "phi": -73,
                                 "radius": 100
                             },
                             "rotation": {
@@ -847,8 +784,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 20,
-                                "height": 20
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -867,8 +804,8 @@
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": -20,
-                                "phi": -70,
+                                "theta": -50,
+                                "phi": -73,
                                 "radius": 100
                             },
                             "rotation": {
@@ -880,8 +817,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 20,
-                                "height": 20
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -995,97 +932,6 @@
                             "keep": false,
                             "data": {
                                 "video": "assets/a60a_voice_sv.mp4"
-                            },
-                            "options": {
-                                "autoPlay": true,
-                                "loop": false,
-                                "volume": 1,
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "width": "1%",
-                                "height": "1%",
-                                "alpha": 1,
-                                "top": 0,
-                                "right": 0,
-                                "bottom": 0,
-                                "left": 0
-                            }
-                        }
-                    ]
-                },
-                "playlists": {}
-            },
-            {
-                "uid": "a60b",
-                "name": "Kvarnbyn Intro",
-                "slug": "kvarnbyn",
-                "description": "Intro to Kvarnbyn",
-                "tags": [],
-                "media": {
-                    "uid": "image-a60b",
-                    "type": "image",
-                    "source": {
-                        "format": "equi",
-                        "url": "assets/black_360.jpg"
-                    }
-                },
-                "camera": {
-                    "keep": true,
-                    "yaw": {
-                        "default": 0,
-                        "min": -360,
-                        "max": 360
-                    },
-                    "roll": {
-                        "default": 0,
-                        "min": 0,
-                        "max": 0
-                    },
-                    "fov": {
-                        "default": 90,
-                        "min": 30,
-                        "max": 120
-                    },
-                    "gaze": {
-                        "delay": 2,
-                        "cursor": {},
-                        "object": {}
-                    }
-                },
-                "hotspots": [],
-                "plugins": {
-                    "instances": [
-                        {
-                            "uid": "simplevideo-a60b",
-                            "engine": "org.forgejs.simplevideo",
-                            "keep": false,
-                            "data": {
-                                "video": "assets/a60b_film.mp4"
-                            },
-                            "events": {
-                                "onEnded": "action-backtocenter-a60"
-                            },
-                            "options": {
-                                "autoPlay": true,
-                                "loop": true,
-                                "volume": 1,
-                                "horizontalCenter": true,
-                                "verticalCenter": true,
-                                "width": "100%",
-                                "height": "100%",
-                                "alpha": 1,
-                                "top": 0,
-                                "right": 0,
-                                "bottom": 0,
-                                "left": 0
-                            }
-                        },
-                        {
-                            "uid": "simplevideo-a60b-voice",
-                            "engine": "org.forgejs.simplevideo",
-                            "keep": false,
-                            "data": {
-                                "video": "assets/a60b_voice_sv.mp4"
                             },
                             "options": {
                                 "autoPlay": true,
@@ -1230,7 +1076,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "show-button-a70",
-                                        "delay": 50
+                                        "delay": 31
                                     }
                                 ]
                             }
@@ -1510,6 +1356,105 @@
                         "events": {
                             "onClick": [
                                 "action-to-loco-b20"
+                            ]
+                        }
+                    },
+                    {
+                        "uid": "hotspot-shortcut-bench",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": 70,
+                                "phi": -70,
+                                "radius": 100
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 35,
+                                "height": 35
+                            }
+                        },
+                        "material": {
+                            "image": "assets/shortcut_bench.png",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "shortcut-bench"
+                            ]
+                        }
+                    },
+                    {
+                        "uid": "hotspot-shortcut-square",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": -110,
+                                "phi": -70,
+                                "radius": 100
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 35,
+                                "height": 35
+                            }
+                        },
+                        "material": {
+                            "image": "assets/shortcut_square.png",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "shortcut-square"
+                            ]
+                        }
+                    },
+                    {
+                        "uid": "hotspot-shortcut-bridge-2",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": 160,
+                                "phi": -70,
+                                "radius": 100
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 35,
+                                "height": 35
+                            }
+                        },
+                        "material": {
+                            "image": "assets/shortcut_bridge_2.png",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "shortcut-bridge-2"
                             ]
                         }
                     }
@@ -2430,6 +2375,105 @@
                                 "action-loadscene-c20"
                             ]
                         }
+                    },
+                    {
+                        "uid": "hotspot-shortcut-bench",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": 25,
+                                "phi": -70,
+                                "radius": 100
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 35,
+                                "height": 35
+                            }
+                        },
+                        "material": {
+                            "image": "assets/shortcut_bench.png",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "shortcut-bench"
+                            ]
+                        }
+                    },
+                    {
+                        "uid": "hotspot-shortcut-bridge-1",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": 0,
+                                "phi": -70,
+                                "radius": 100
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 35,
+                                "height": 35
+                            }
+                        },
+                        "material": {
+                            "image": "assets/shortcut_bridge_1.png",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "shortcut-bridge-1"
+                            ]
+                        }
+                    },
+                    {
+                        "uid": "hotspot-shortcut-bridge-2",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": 50,
+                                "phi": -70,
+                                "radius": 100
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 35,
+                                "height": 35
+                            }
+                        },
+                        "material": {
+                            "image": "assets/shortcut_bridge_2.png",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "shortcut-bridge-2"
+                            ]
+                        }
                     }
                 ],
                 "plugins": {
@@ -3284,6 +3328,105 @@
                                 "action-loadscene-d20"
                             ]
                         }
+                    },
+                    {
+                        "uid": "hotspot-shortcut-bench",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": -82,
+                                "phi": -70,
+                                "radius": 100
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 35,
+                                "height": 35
+                            }
+                        },
+                        "material": {
+                            "image": "assets/shortcut_bench.png",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "shortcut-bench"
+                            ]
+                        }
+                    },
+                    {
+                        "uid": "hotspot-shortcut-bridge-1",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": 188,
+                                "phi": -70,
+                                "radius": 100
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 35,
+                                "height": 35
+                            }
+                        },
+                        "material": {
+                            "image": "assets/shortcut_bridge_1.png",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "shortcut-bridge-1"
+                            ]
+                        }
+                    },
+                    {
+                        "uid": "hotspot-shortcut-square",
+                        "facingCenter": true,
+                        "transform": {
+                            "position": {
+                                "theta": 98,
+                                "phi": -70,
+                                "radius": 100
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            }
+                        },
+                        "geometry": {
+                            "type": "plane",
+                            "options": {
+                                "width": 35,
+                                "height": 35
+                            }
+                        },
+                        "material": {
+                            "image": "assets/shortcut_square.png",
+                            "opacity": 1,
+                            "mediaType": "image"
+                        },
+                        "events": {
+                            "onClick": [
+                                "shortcut-square"
+                            ]
+                        }
                     }
                 ],
                 "plugins": {
@@ -3726,7 +3869,7 @@
                             "keep": false,
                             "events": {},
                             "options": {
-                                "url": "assets/bg_water.jpg",
+                                "url": "assets/a20_photo.jpg",
                                 "alpha": 1,
                                 "maximized": true,
                                 "horizontalCenter": true,
@@ -3820,7 +3963,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "show-button-d20",
-                                        "delay": 40
+                                        "delay": 2
                                     }
                                 ]
                             }
@@ -3907,21 +4050,75 @@
                             "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
+                                "onClick": "action-goto-museum"
+                            },
+                            "options": {
+                                "url": "assets/museum_molndal.png",
+                                "i18n": false,
+                                "horizontalCenter": false,
+                                "verticalCenter": true,
+                                "width": 300,
+                                "height": 30,
+                                "left": 80
+                            }
+                        },
+                        {
+                            "uid": "imagebutton-d30-15",
+                            "engine": "se.ri.imagebutton",
+                            "keep": false,
+                            "events": {
                                 "onClick": "action-goto-map"
                             },
                             "options": {
                                 "url": "assets/show_map.png",
                                 "i18n": true,
-                                "horizontalCenter": true,
+                                "horizontalCenter": false,
                                 "verticalCenter": true,
                                 "width": 300,
                                 "height": 30,
+                                "right": 80
+                            }
+                        },
+                        {
+                            "uid": "imagebutton-d30-2",
+                            "engine": "se.ri.imagebutton",
+                            "keep": false,
+                            "events": {
+                                "onClick": "action-goto-kvarnbysite"
+                            },
+                            "options": {
+                                "url": "assets/about_kvarnbyn.png",
+                                "i18n": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": false,
+                                "width": 300,
+                                "height": 30,
+                                "bottom": 140,
                                 "right": 0,
                                 "left": 0
                             }
                         },
                         {
-                            "uid": "imagebutton-d30-2",
+                            "uid": "imagebutton-d30-3",
+                            "engine": "se.ri.imagebutton",
+                            "keep": false,
+                            "events": {
+                                "onClick": "action-goto-credits"
+                            },
+                            "options": {
+                                "url": "assets/credit_list.png",
+                                "i18n": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": false,
+                                "width": 300,
+                                "height": 30,
+                                "bottom": 55,
+                                "right": 0,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "imagebutton-d30-4",
                             "engine": "se.ri.imagebutton",
                             "keep": false,
                             "events": {
@@ -4364,6 +4561,36 @@
                 "name": "assign",
                 "args": [
                     "https://www.google.se/maps/place/M%C3%B6lndals+stadsmuseum/@57.6578068,12.0319405,15z/data=!4m5!3m4!1s0x0:0x6a8f19e6d4e0cdeb!8m2!3d57.6578068!4d12.0319405"
+                ]
+            }
+        },
+        {
+            "uid": "action-goto-museum",
+            "target": "window.location",
+            "method": {
+                "name": "assign",
+                "args": [
+                    "https://museum.molndal.se/"
+                ]
+            }
+        },
+        {
+            "uid": "action-goto-kvarnbysite",
+            "target": "window.location",
+            "method": {
+                "name": "assign",
+                "args": [
+                    "https://www.molndal.se/4.33130d21169d8c818fc2ed39.html"
+                ]
+            }
+        },
+        {
+            "uid": "action-goto-credits",
+            "target": "window.location",
+            "method": {
+                "name": "assign",
+                "args": [
+                    "https://entermolndal.se/om/"
                 ]
             }
         },
