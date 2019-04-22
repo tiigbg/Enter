@@ -43,12 +43,13 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 
-<body>
+<body onLoad="window.plugins.insomnia.keepAwake()">
   <div class="speaker"></div>
 
   <div id="container"></div>
 
   <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/Insomnia.js"></script>
 
   <!-- Include the threejs custom build -->
   <script src="lib/three.js/three.custom.min.js"></script>

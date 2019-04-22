@@ -1,6 +1,10 @@
 {
     "phone1": "Getting your phone ready",
+    "app1": "WELCOME",
+    "app15": "Find the starting point and get ready:<br /><br /><br /><br /><br /><br /><br />",
+    "app2": "1. Go to Kvarnbyn, Mölndal.<br />2. Put your headphones on.<br />3. Go to the starting point: the benches next to the lamp post opposite Kråkans Krog.<br />4. Press Next.",
     "phone2": "1. Shut off Wi-Fi completely.<br />2. Set brightness ☼ to max or auto.<br />3. To avoid the screen going to sleep, set the screen's timeout to 3 minutes or more.<br />4. Adjust the volume so you can hear it clearly.",
+    "app3": "1. Set brightness ☼ to max or auto.<br />2. Adjust the volume so you can hear clearly.<br />3. Press Start.",
     "phone3": "5. Hold your mobile screen horizontally. If the image doesn’t follow, ensure portrait orientation lock is off. ↺<br />6. iPhone: Turn on “Motion & Orientation Access” for Safari. This is done under Settings, under the Safari heading.<br />7. Put the browser in fullscreen mode:<br />&nbsp;&nbsp;&nbsp;Android: Double-tap on the screen for fullscreen display.<br />&nbsp;&nbsp;&nbsp;iPhone: If tabs and the address bar are visible at the top: Tap the “Share”-button at the bottom of the screen (the box with an arrow) and choose “Add to home screen”. Then continue from the new icon on your home screen.",
     "outro1": "This is the end of the tour of Kvarnbyn.<br />If you have borrowed any equipment, please return it now.<br />Want to know more about Kvarnbyn? Visit Mölndals stadsmuseum:<br /><br /><br /><br /><br /><br />For more info about ENTER Mölndal, the material and the team:<br /><br /><br />",
     "assets/next.png": "assets/next_en.png",

@@ -210,6 +210,141 @@
                 "playlists": {}
             },
             {
+                "uid": "a30",
+                "name": "Tips Text",
+                "slug": "tips",
+                "description": "Tips text",
+                "tags": [],
+                "camera": {
+                    "keep": true,
+                    "yaw": {
+                        "default": 0,
+                        "min": -360,
+                        "max": 360
+                    },
+                    "roll": {
+                        "default": 0,
+                        "min": 0,
+                        "max": 0
+                    },
+                    "fov": {
+                        "default": 90,
+                        "min": 30,
+                        "max": 120
+                    },
+                    "gaze": {
+                        "delay": 2,
+                        "cursor": {},
+                        "object": {}
+                    }
+                },
+                "hotspots": [],
+                "plugins": {
+                    "instances": [
+                        {
+                            "uid": "simpleimage-a30",
+                            "engine": "org.forgejs.simpleimage",
+                            "keep": false,
+                            "options": {
+                                "url": "assets/a30_photo.jpg",
+                                "alpha": 1,
+                                "maximized": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": 0,
+                                "height": 0,
+                                "top": 0,
+                                "right": 0,
+                                "bottom": 0,
+                                "left": 0
+                            }
+                        },
+                        {
+                            "uid": "simpletext-a30-0",
+                            "engine": "org.forgejs.simpletext",
+                            "keep": false,
+                            "options": {
+                                "horizontalCenter": true,
+                                "verticalCenter": false,
+                                "top": 10,
+                                "right": 0,
+                                "left": 0,
+                                "config": {
+                                    "i18n": true,
+                                    "value": "app1",
+                                    "fontSize": "10vmin",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
+                                    "color": "#f7f6f2",
+                                    "textAlign": "center"
+                                }
+                            }
+                        },
+                        {
+                            "uid": "simpletext-a30-05",
+                            "engine": "org.forgejs.simpletext",
+                            "keep": false,
+                            "options": {
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "top": 0,
+                                "config": {
+                                    "i18n": true,
+                                    "value": "app15",
+                                    "fontSize": "3vmax",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
+                                    "color": "#f7f6f2",
+                                    "textAlign": "left"
+                                }
+                            }
+                        },
+                        {
+                            "uid": "simpletext-a30-1",
+                            "engine": "org.forgejs.simpletext",
+                            "keep": false,
+                            "options": {
+                                "horizontalCenter": false,
+                                "verticalCenter": true,
+                                "top": 170,
+                                "left": 30,
+                                "config": {
+                                    "i18n": true,
+                                    "value": "app2",
+                                    "fontSize": "3vmax",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
+                                    "color": "#f7f6f2",
+                                    "textAlign": "left"
+                                }
+                            }
+                        },
+                        {
+                            "uid": "imagebutton-a30",
+                            "engine": "se.ri.imagebutton",
+                            "keep": false,
+                            "events": {
+                                "onClick": "action-next"
+                            },
+                            "options": {
+                                "url": "assets/next_small.png",
+                                "horizontalCenter": true,
+                                "width": 300,
+                                "height": 30,
+                                "right": 0,
+                                "bottom": 25,
+                                "left": 0,
+                                "i18n": true
+                            }
+                        }
+                    ]
+                },
+                "playlists": {}
+            },
+            {
                 "uid": "a20",
                 "name": "Welcome",
                 "slug": "welcome",
@@ -322,121 +457,6 @@
                 "playlists": {}
             },
             {
-                "uid": "a30",
-                "name": "Tips Text",
-                "slug": "tips",
-                "description": "Tips text",
-                "tags": [],
-                "camera": {
-                    "keep": true,
-                    "yaw": {
-                        "default": 0,
-                        "min": -360,
-                        "max": 360
-                    },
-                    "roll": {
-                        "default": 0,
-                        "min": 0,
-                        "max": 0
-                    },
-                    "fov": {
-                        "default": 90,
-                        "min": 30,
-                        "max": 120
-                    },
-                    "gaze": {
-                        "delay": 2,
-                        "cursor": {},
-                        "object": {}
-                    }
-                },
-                "hotspots": [],
-                "plugins": {
-                    "instances": [
-                        {
-                            "uid": "simpleimage-a30",
-                            "engine": "org.forgejs.simpleimage",
-                            "keep": false,
-                            "options": {
-                                "url": "assets/a30_photo.jpg",
-                                "alpha": 1,
-                                "maximized": true,
-                                "horizontalCenter": true,
-                                "verticalCenter": true,
-                                "width": 0,
-                                "height": 0,
-                                "top": 0,
-                                "right": 0,
-                                "bottom": 0,
-                                "left": 0
-                            }
-                        },
-                        {
-                            "uid": "simpletext-a30-0",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "top": 10,
-                                "right": 0,
-                                "left": 0,
-                                "config": {
-                                    "i18n": true,
-                                    "value": "phone1",
-                                    "fontSize": "10vmin",
-                                    "fontFamily": "futura-pt, sans-serif",
-                                    "fontStyle": "normal",
-                                    "fontWeight": 700,
-                                    "color": "#f7f6f2",
-                                    "textAlign": "center"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "simpletext-a30-1",
-                            "engine": "org.forgejs.simpletext",
-                            "keep": false,
-                            "options": {
-                                "horizontalCenter": false,
-                                "verticalCenter": true,
-                                "top": 90,
-                                "left": 30,
-                                "config": {
-                                    "i18n": true,
-                                    "value": "phone2",
-                                    "fontSize": "3vmax",
-                                    "fontFamily": "futura-pt, sans-serif",
-                                    "fontStyle": "normal",
-                                    "fontWeight": 700,
-                                    "color": "#f7f6f2",
-                                    "textAlign": "left"
-                                }
-                            }
-                        },
-                        {
-                            "uid": "imagebutton-a30",
-                            "engine": "se.ri.imagebutton",
-                            "keep": false,
-                            "events": {
-                                "onClick": "action-next"
-                            },
-                            "options": {
-                                "url": "assets/next_small.png",
-                                "horizontalCenter": true,
-                                "width": 300,
-                                "height": 30,
-                                "right": 0,
-                                "bottom": 25,
-                                "left": 0,
-                                "i18n": true
-                            }
-                        }
-                    ]
-                },
-                "playlists": {}
-            },
-            {
                 "uid": "a40",
                 "name": "Tips Text 2",
                 "slug": "tips2",
@@ -491,14 +511,36 @@
                             "engine": "org.forgejs.simpletext",
                             "keep": false,
                             "options": {
+                                "horizontalCenter": true,
+                                "verticalCenter": false,
+                                "top": 10,
+                                "right": 0,
+                                "left": 0,
+                                "config": {
+                                    "i18n": true,
+                                    "value": "phone1",
+                                    "fontSize": "10vmin",
+                                    "fontFamily": "futura-pt, sans-serif",
+                                    "fontStyle": "normal",
+                                    "fontWeight": 700,
+                                    "color": "#f7f6f2",
+                                    "textAlign": "center"
+                                }
+                            }
+                        },
+                        {
+                            "uid": "simpletext-a40-1",
+                            "engine": "org.forgejs.simpletext",
+                            "keep": false,
+                            "options": {
                                 "horizontalCenter": false,
                                 "verticalCenter": true,
                                 "top": 90,
                                 "left": 30,
                                 "config": {
                                     "i18n": true,
-                                    "value": "phone3",
-                                    "fontSize": "2vmax",
+                                    "value": "app3",
+                                    "fontSize": "3vmax",
                                     "fontFamily": "futura-pt, sans-serif",
                                     "fontStyle": "normal",
                                     "fontWeight": 700,
@@ -734,7 +776,7 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-bridge-1",
+                        "uid": "hotspot-shortcut-bridge-1-a60",
                         "facingCenter": true,
                         "transform": {
                             "position": {
@@ -767,7 +809,7 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-square",
+                        "uid": "hotspot-shortcut-square-a60",
                         "facingCenter": true,
                         "transform": {
                             "position": {
@@ -800,7 +842,7 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-bridge-2",
+                        "uid": "hotspot-shortcut-bridge-2-a60",
                         "facingCenter": true,
                         "transform": {
                             "position": {
@@ -1360,12 +1402,12 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-bench",
+                        "uid": "hotspot-shortcut-bench-b10",
                         "facingCenter": true,
                         "transform": {
                             "position": {
                                 "theta": 70,
-                                "phi": -70,
+                                "phi": -75,
                                 "radius": 100
                             },
                             "rotation": {
@@ -1377,8 +1419,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -1393,12 +1435,12 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-square",
+                        "uid": "hotspot-shortcut-square-b10",
                         "facingCenter": true,
                         "transform": {
                             "position": {
                                 "theta": -110,
-                                "phi": -70,
+                                "phi": -75,
                                 "radius": 100
                             },
                             "rotation": {
@@ -1410,8 +1452,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -1426,12 +1468,12 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-bridge-2",
+                        "uid": "hotspot-shortcut-bridge-2-b10",
                         "facingCenter": true,
                         "transform": {
                             "position": {
                                 "theta": 160,
-                                "phi": -70,
+                                "phi": -75,
                                 "radius": 100
                             },
                             "rotation": {
@@ -1443,8 +1485,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -2377,12 +2419,12 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-bench",
+                        "uid": "hotspot-shortcut-bench-c10",
                         "facingCenter": true,
                         "transform": {
                             "position": {
                                 "theta": 25,
-                                "phi": -70,
+                                "phi": -73,
                                 "radius": 100
                             },
                             "rotation": {
@@ -2394,8 +2436,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -2410,12 +2452,12 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-bridge-1",
+                        "uid": "hotspot-shortcut-bridge-1-c10",
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 0,
-                                "phi": -70,
+                                "theta": -30,
+                                "phi": -73,
                                 "radius": 100
                             },
                             "rotation": {
@@ -2427,8 +2469,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -2443,12 +2485,12 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-bridge-2",
+                        "uid": "hotspot-shortcut-bridge-2-c10",
                         "facingCenter": true,
                         "transform": {
                             "position": {
-                                "theta": 50,
-                                "phi": -70,
+                                "theta": 80,
+                                "phi": -73,
                                 "radius": 100
                             },
                             "rotation": {
@@ -2460,8 +2502,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -3330,12 +3372,12 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-bench",
+                        "uid": "hotspot-shortcut-bench-d10",
                         "facingCenter": true,
                         "transform": {
                             "position": {
                                 "theta": -82,
-                                "phi": -70,
+                                "phi": -75,
                                 "radius": 100
                             },
                             "rotation": {
@@ -3347,8 +3389,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -3363,12 +3405,12 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-bridge-1",
+                        "uid": "hotspot-shortcut-bridge-1-d10",
                         "facingCenter": true,
                         "transform": {
                             "position": {
                                 "theta": 188,
-                                "phi": -70,
+                                "phi": -75,
                                 "radius": 100
                             },
                             "rotation": {
@@ -3380,8 +3422,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -3396,12 +3438,12 @@
                         }
                     },
                     {
-                        "uid": "hotspot-shortcut-square",
+                        "uid": "hotspot-shortcut-square-d10",
                         "facingCenter": true,
                         "transform": {
                             "position": {
                                 "theta": 98,
-                                "phi": -70,
+                                "phi": -75,
                                 "radius": 100
                             },
                             "rotation": {
@@ -3413,8 +3455,8 @@
                         "geometry": {
                             "type": "plane",
                             "options": {
-                                "width": 35,
-                                "height": 35
+                                "width": 30,
+                                "height": 30
                             }
                         },
                         "material": {
@@ -3963,7 +4005,7 @@
                                 "actions": [
                                     {
                                         "actionUID": "show-button-d20",
-                                        "delay": 2
+                                        "delay": 42
                                     }
                                 ]
                             }
@@ -4046,6 +4088,24 @@
                             }
                         },
                         {
+                            "uid": "imagebutton-d30-2",
+                            "engine": "se.ri.imagebutton",
+                            "keep": false,
+                            "events": {
+                                "onClick": "action-goto-kvarnbysite"
+                            },
+                            "options": {
+                                "url": "assets/about_kvarnbyn.png",
+                                "i18n": true,
+                                "horizontalCenter": true,
+                                "verticalCenter": true,
+                                "width": 300,
+                                "height": 90,
+                                "right": 0,
+                                "left": 0
+                            }
+                        },
+                        {
                             "uid": "imagebutton-d30-1",
                             "engine": "se.ri.imagebutton",
                             "keep": false,
@@ -4059,7 +4119,7 @@
                                 "verticalCenter": true,
                                 "width": 300,
                                 "height": 30,
-                                "left": 80
+                                "left": 50
                             }
                         },
                         {
@@ -4076,26 +4136,7 @@
                                 "verticalCenter": true,
                                 "width": 300,
                                 "height": 30,
-                                "right": 80
-                            }
-                        },
-                        {
-                            "uid": "imagebutton-d30-2",
-                            "engine": "se.ri.imagebutton",
-                            "keep": false,
-                            "events": {
-                                "onClick": "action-goto-kvarnbysite"
-                            },
-                            "options": {
-                                "url": "assets/about_kvarnbyn.png",
-                                "i18n": true,
-                                "horizontalCenter": true,
-                                "verticalCenter": false,
-                                "width": 300,
-                                "height": 30,
-                                "bottom": 140,
-                                "right": 0,
-                                "left": 0
+                                "right": 50
                             }
                         },
                         {
